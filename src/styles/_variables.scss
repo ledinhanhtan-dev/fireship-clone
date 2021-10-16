@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Cubano";
+  src: local("Cubano"), url(/src/assets/fonts/cubano-regular-webfont.woff);
+}
+
+// Typography
+$font-display: "Cubano", sans-serif;
+$font-primary: "Sofia Pro", sans-serif;
+$font-code: "Source Code Pro", monospace;
+
+// Colors
+// Neutral
+$neutral-50: #f7f9ff;
+$neutral-100: #dbe1e8;
+$neutral-200: #b2becd;
+$neutral-300: #899aa6;
+$neutral-400: #6c7983;
+$neutral-500: #5a656e;
+$neutral-600: #454e56;
+$neutral-700: #333a40;
+$neutral-800: #12181b;
+$neutral-900: #090b0d;
+
+// Blue
+$blue-50: #cee0ff;
+$blue-100: #6ca0fc;
+$blue-200: #498afb;
+$blue-300: #2674fa;
+
+// Green
+$green-50: #9cffd4;
+$green-100: #0be586;
+$green-200: #09c372;
+$green-300: #07a15e;
+
+// Orange
+$orange-50: #ffddcb;
+$orange-100: #fb9865;
+$orange-200: #fa8142;
+$orange-300: #f96a1f;
+
+// Pink
+$pink-50: #ffcbde;
+$pink-100: #ff649e;
+$pink-200: #ff4088;
+$pink-300: #ff1c72;
+
+// Purple
+$purple-50: #e6d3ff;
+$purple-100: #a481d5;
+$purple-200: #9166cc;
+$purple-300: #7d4bc3;
+
+// Red
+$red-50: #ffd2db;
+$red-100: #a481d5;
+$red-200: #9166cc;
+$red-300: #7d4bc3;
+
+// Tags
+$tag-android: #a4c34a;
+$tag-angular: #dc0530;
+$tag-css: #f954be;
+$tag-docker: #2496ed;
+$tag-electron: #adecf3;
+$tag-fauna: #6675e0;
+$tag-flutter: #54c5f8;
+$tag-github: #24292e;
+$tag-go: #00add8;
+$tag-graphql: #fffbe3;
+$tag-javascript: #2775c3;
+$tag-nest: #e0234e;
+$tag-node: #90c53f;
+$tag-python: #3879ab;
+$tag-react: #f0db4f;
+$tag-rpi: #bc1142;
+$tag-svelte: #ff3e00;
+$tag-typescript: #2775c3;
+$tag-vue: #41b883;
+
+// Shades
+$black: #000000;
+$white: #ffffff;
+
+// Gradients
+$gradient-100: linear-gradient(to right, $orange-200, $pink-200);
+$gradient-200: linear-gradient(to right, $green-100, $green-300);
+
+// Transition durations
+$duration-1: 100ms;
+$duration-2: 200ms;
+$duration-3: 300ms;
+
+// Breakpoints
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xl: 1440px;
+
+// Shadows
+$shadow-nav: 0px 0px 10px rgb(1, 1, 1);
+$shadow-card: 0px 4px 8px rgba(0, 0, 0, 0.4);
+
+// Border radius
+$rounded-1: 2px;
+$rounded-2: 4px;
+$rounded-4: 8px;
+$rounded-max: 50%;
+
+//  Mixins
+@mixin container {
+}
+
+@mixin respond($break-point) {
+  @media only screen and (max-width: $break-point) {
+    @content;
+  }
+}
