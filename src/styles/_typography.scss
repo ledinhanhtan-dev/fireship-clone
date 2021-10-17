@@ -10,6 +10,7 @@ h2,
 h3,
 h4 {
   font-family: $font-display;
+  font-weight: normal;
 }
 
 h5 {
@@ -26,10 +27,16 @@ h5 {
 
 h1 {
   font-size: 2.5rem;
+  @include respond($md) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   font-size: 2rem;
+  @include respond($md) {
+    font-size: 1.5rem;
+  }
 }
 
 h3 {
@@ -60,6 +67,22 @@ p {
   font-size: 0.875rem;
 }
 
+code {
+  font-family: $font-code;
+}
+
 .footer {
   font-size: 1.10625rem;
+}
+
+.gradient-text {
+  background: $gradient-100;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  padding: 0 5px;
+  background: $gradient-100;
+  border-radius: $radius-2;
 }

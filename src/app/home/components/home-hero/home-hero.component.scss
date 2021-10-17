@@ -1,0 +1,57 @@
+@import "/src/styles/variables";
+
+:host {
+  gap: 2rem;
+  padding: 6rem 7vw;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  display: grid;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  line-height: 1.5;
+  font-size: 1.875rem;
+  color: $neutral-200;
+
+  code {
+    color: white;
+    font-weight: 700;
+  }
+
+  strong {
+    color: $white;
+  }
+}
+
+.actions {
+  display: flex;
+  margin-top: 1rem;
+
+  & > app-button:first-child {
+    margin-right: 0.5rem;
+  }
+}
+
+@include respond($md) {
+  :host {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 0 2rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}

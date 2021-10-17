@@ -1,6 +1,7 @@
 @import "/src/styles/variables";
 
 .main {
+  padding: 1rem;
   margin-top: $nav-height-desktop;
 
   @include respond($md) {

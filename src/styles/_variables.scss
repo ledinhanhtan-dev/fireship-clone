@@ -23,40 +23,34 @@ $neutral-800: #12181b;
 $neutral-900: #090b0d;
 
 // Blue
-$blue-50: #cee0ff;
 $blue-100: #6ca0fc;
 $blue-200: #498afb;
 $blue-300: #2674fa;
 
 // Green
-$green-50: #9cffd4;
 $green-100: #0be586;
 $green-200: #09c372;
 $green-300: #07a15e;
 
 // Orange
-$orange-50: #ffddcb;
 $orange-100: #fb9865;
 $orange-200: #fa8142;
 $orange-300: #f96a1f;
 
 // Pink
-$pink-50: #ffcbde;
 $pink-100: #ff649e;
 $pink-200: #ff4088;
 $pink-300: #ff1c72;
 
 // Purple
-$purple-50: #e6d3ff;
 $purple-100: #a481d5;
 $purple-200: #9166cc;
 $purple-300: #7d4bc3;
 
 // Red
-$red-50: #ffd2db;
-$red-100: #a481d5;
-$red-200: #9166cc;
-$red-300: #7d4bc3;
+$red-100: #ff5c7c;
+$red-200: #ff3860;
+$red-300: #ff1443;
 
 // Tags
 $tag-android: #a4c34a;
@@ -82,6 +76,7 @@ $tag-vue: #41b883;
 // Shades
 $black: #000000;
 $white: #ffffff;
+$transparent: transparent;
 
 // Gradients
 $gradient-100: linear-gradient(to right, $orange-200, $pink-200);

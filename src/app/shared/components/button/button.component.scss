@@ -1,0 +1,86 @@
+@import "/src/styles/variables";
+
+:host {
+  display: block;
+}
+
+.btn {
+  font-weight: 700;
+  color: $neutral-200;
+  letter-spacing: 0.05ch;
+  border-radius: $radius-2;
+  border: 2px solid transparent;
+  transition: background-color 400ms ease;
+  text-transform: uppercase;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+
+  &.sm {
+    font-weight: 500;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  &.md {
+    font-size: 0.75rem;
+    padding: 0.75rem 1.5rem;
+
+    @include respond($md) {
+      font-size: 0.6rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+
+  &.lg {
+    font-size: 1.25rem;
+    padding: 25px 50px;
+  }
+
+  &:hover {
+    color: $white;
+    transform: translateY(-2px);
+  }
+}
+
+@mixin outline-flat($color) {
+  &.outline {
+    border-color: $color;
+    &:hover {
+      background-color: $color;
+    }
+  }
+
+  &.flat {
+    border-color: $color;
+    background-color: $color;
+  }
+}
+
+.neutral {
+  @include outline-flat($neutral-400);
+}
+
+.blue {
+  @include outline-flat($blue-200);
+}
+
+.green {
+  @include outline-flat($green-200);
+}
+
+.orange {
+  @include outline-flat($orange-200);
+}
+
+.pink {
+  @include outline-flat($pink-200);
+}
+
+.purple {
+  @include outline-flat($purple-200);
+}
+
+.red {
+  @include outline-flat($red-200);
+}
