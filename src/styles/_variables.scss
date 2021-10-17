@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Cubano";
-  src: local("Cubano"), url(/src/assets/fonts/cubano-regular-webfont.woff);
+  src: local("Cubano"),
+    url("/assets/fonts/cubano-regular-webfont.woff") format("woff");
 }
 
 // Typography
@@ -17,7 +18,7 @@ $neutral-300: #899aa6;
 $neutral-400: #6c7983;
 $neutral-500: #5a656e;
 $neutral-600: #454e56;
-$neutral-700: #333a40;
+$neutral-700: #2a2e35;
 $neutral-800: #12181b;
 $neutral-900: #090b0d;
 
@@ -90,30 +91,76 @@ $gradient-200: linear-gradient(to right, $green-100, $green-300);
 $duration-1: 100ms;
 $duration-2: 200ms;
 $duration-3: 300ms;
-
-// Breakpoints
-$sm: 640px;
-$md: 768px;
-$lg: 1024px;
-$xl: 1280px;
-$xl: 1440px;
+$duration-4: 400ms;
+$duration-5: 500ms;
 
 // Shadows
 $shadow-nav: 0px 0px 10px rgb(1, 1, 1);
 $shadow-card: 0px 4px 8px rgba(0, 0, 0, 0.4);
 
 // Border radius
-$rounded-1: 2px;
-$rounded-2: 4px;
-$rounded-4: 8px;
-$rounded-max: 50%;
+$radius-1: 2px;
+$radius-2: 4px;
+$radius-4: 8px;
+$radius-max: 50%;
+
+// Breakpoints
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1440px;
+
+// Navbar
+$nav-height-mobile: 60px;
+$nav-height-desktop: 80px;
 
 //  Mixins
 @mixin container {
 }
 
-@mixin respond($break-point) {
-  @media only screen and (max-width: $break-point) {
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
     @content;
+  }
+}
+
+@mixin hide-sm {
+  @include respond($sm) {
+    visibility: hidden;
+    display: none;
+    @content; // Override
+  }
+}
+
+@mixin hide-md {
+  @include respond($md) {
+    visibility: hidden;
+    display: none;
+    @content; // Override
+  }
+}
+
+@mixin hide-lg {
+  @include respond($lg) {
+    visibility: hidden;
+    display: none;
+    @content; // Override
+  }
+}
+
+@mixin hide-xl {
+  @include respond($xl) {
+    visibility: hidden;
+    display: none;
+    @content; // Override
+  }
+}
+
+@mixin hide-xxl {
+  @include respond($md) {
+    visibility: hidden;
+    display: none;
+    @content; // Override
   }
 }

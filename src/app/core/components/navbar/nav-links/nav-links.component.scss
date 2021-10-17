@@ -1,0 +1,50 @@
+@use "/src/styles/partials/nav-item";
+@import "/src/styles/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  @include hide-md {
+    display: flex;
+    width: 0;
+  }
+}
+
+.item {
+  font-size: 1.25rem;
+  color: $neutral-200;
+  font-family: $font-display;
+  transition: color 300ms ease;
+  flex-direction: row;
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.primary {
+  color: $neutral-400;
+}
+
+.secondary {
+  color: $neutral-600;
+}
+
+.primary,
+.secondary {
+  transition: color 500ms ease;
+}
+
+.item:hover {
+  .primary {
+    color: $neutral-300;
+  }
+
+  .secondary {
+    color: $white;
+  }
+}

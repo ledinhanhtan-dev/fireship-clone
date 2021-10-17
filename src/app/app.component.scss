@@ -1,0 +1,9 @@
+@import "/src/styles/variables";
+
+.main {
+  margin-top: $nav-height-desktop;
+
+  @include respond($md) {
+    margin-top: $nav-height-mobile;
+  }
+}

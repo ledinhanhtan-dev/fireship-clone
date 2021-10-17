@@ -1,0 +1,6 @@
+<svg
+  [ngClass]="size ? size : ''"
+  [ngStyle]="wh ? { width: wh.w, height: wh.h } : null"
+>
+  <use [attr.xlink:href]="'/assets/icons/icons.svg#icon-' + iconId" />
+</svg>

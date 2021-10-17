@@ -1,0 +1,21 @@
+@import "/src/styles/variables";
+
+.item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: color 500ms ease;
+  height: $nav-height-mobile;
+  color: $neutral-600;
+  margin: 0 1rem;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include respond($md) {
+    margin: 0 0.75rem;
+  }
+}
