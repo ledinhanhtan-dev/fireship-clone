@@ -1,24 +1,6 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: revert;
-}
+@import "/src/styles/variables";
 
 html {
-  box-sizing: border-box;
-
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -34,75 +16,6 @@ html {
   }
 }
 
-html,
-body {
-  height: 100%;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  cursor: pointer;
-  color: currentColor;
-  text-decoration: none;
-}
-
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-ul,
-li {
-  list-style: none;
-}
-
-svg {
-  fill: currentColor;
-  height: 30px;
-  width: 30px;
-}
-
-input,
-select,
-textarea {
-  font-size: inherit;
-  font-family: inherit;
-  border-radius: 0;
-  color: inherit;
-}
-
-input:focus {
-  outline: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-button {
-  font-size: inherit;
-  text-transform: unset;
-  font-family: inherit;
-  font-weight: unset;
-  background: unset;
-  cursor: pointer;
-  color: inherit;
-  border: 0;
-}
-
-select {
-  font-size: inherit;
-  font-family: inherit;
-  background: unset;
-  border: none;
+hr {
+  border-top: 2px dashed $neutral-700;
 }

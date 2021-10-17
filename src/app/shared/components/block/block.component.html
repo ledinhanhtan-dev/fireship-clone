@@ -1,0 +1,7 @@
+<hr />
+<h2 class="heading" *ngIf="!gradientHeading">{{ heading }}</h2>
+<h2 class="heading" *ngIf="gradientHeading">
+  <span class="gradient-text">{{ firstWord }} </span>{{ restWords }}
+</h2>
+<h5 class="subheading">{{ subheading }}</h5>
+<ng-content></ng-content>

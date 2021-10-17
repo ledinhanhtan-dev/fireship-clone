@@ -13,10 +13,6 @@ h4 {
   font-weight: normal;
 }
 
-h5 {
-  font-family: $font-code;
-}
-
 .d1 {
   font-size: 3.5rem;
 }
@@ -49,6 +45,9 @@ h4 {
 
 h5 {
   font-size: 1rem;
+  font-weight: 400;
+  font-family: $font-code;
+  text-transform: uppercase;
 }
 
 p {
