@@ -1,0 +1,58 @@
+@import "/src/styles/variables";
+
+:host {
+  display: block;
+  background-color: $neutral-700;
+  border-radius: $radius-4;
+  box-shadow: $shadow-card;
+  padding: 3rem 1.5rem;
+  position: relative;
+  color: $neutral-200;
+  margin-bottom: 2rem;
+}
+
+app-icon {
+  color: $white;
+  position: absolute;
+  right: 1.5rem;
+}
+
+.user {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: $radius-max;
+  margin-right: 1rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  @include respond($md) {
+    font-size: 1.25rem;
+  }
+}
+
+.handle {
+  font-weight: 300;
+  font-size: 1.125rem;
+
+  @include respond($md) {
+    font-size: 1rem;
+  }
+}
+
+.content {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1.25rem;
+
+  @include respond($md) {
+    font-size: 1rem;
+  }
+}
