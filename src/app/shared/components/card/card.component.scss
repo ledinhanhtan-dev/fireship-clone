@@ -20,6 +20,12 @@ a {
   display: block;
 }
 
+p {
+  @include respond($md) {
+    margin-bottom: 0;
+  }
+}
+
 button {
   width: 100%;
   padding: 1rem;

@@ -5,19 +5,34 @@
   subheading="Brand new courses and updates every month"
 >
   <div class="row">
-    <app-card [course]="course" *ngFor="let course of courses"></app-card>
+    <app-card
+      [course]="course"
+      *ngFor="let course of newCourses"
+      [withButton]="true"
+    ></app-card>
   </div>
 </app-block>
 
 <app-block
   heading="Learn By Doing"
   subheading="Fast, efficient, project-based video courses"
-></app-block>
+>
+  <div class="row">
+    <app-card [course]="course" *ngFor="let course of doingCourses"></app-card>
+  </div>
+</app-block>
 
 <app-block
   heading="Modern Full Stack"
   subheading="Develop Faster with scalable could infrastructure"
-></app-block>
+>
+  <div class="row">
+    <app-card
+      [course]="course"
+      *ngFor="let course of fullstackCourses"
+    ></app-card>
+  </div>
+</app-block>
 
 <app-block
   heading="New to Firebase?"

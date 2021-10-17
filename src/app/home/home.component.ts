@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { COURSES } from '@core/constants/courses.constant';
+import {
+  DOING_COURSES,
+  FIREBASE_COURSE,
+  FULLSTACK_COURSES,
+  NEW_COURSES,
+} from '@core/constants/courses.constant';
 import { Course } from '@core/models/course.model';
 
 @Component({
@@ -8,14 +13,10 @@ import { Course } from '@core/models/course.model';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  courses: Course[] = COURSES;
-
-  firebaseCourse: Course = {
-    name: 'Firebase - The Basics',
-    url: 'firebase-quickstart',
-    image: 'https://fireship.io/lessons/firebase-quickstart/img/featured.jpg',
-    desc: 'Learn the fundamental concepts needed to start building serious apps with Firebase.',
-  };
+  newCourses: Course[] = NEW_COURSES;
+  doingCourses: Course[] = DOING_COURSES;
+  fullstackCourses: Course[] = FULLSTACK_COURSES;
+  firebaseCourse: Course = FIREBASE_COURSE;
 
   constructor() {}
 
