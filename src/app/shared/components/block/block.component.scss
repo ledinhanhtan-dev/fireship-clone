@@ -1,0 +1,19 @@
+@import "/src/styles/variables";
+
+:host {
+  display: block;
+  padding-bottom: 1rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+.subheading {
+  color: $neutral-200;
+  text-align: center;
+}
+
+.gradient-text {
+  font-style: italic;
+}
