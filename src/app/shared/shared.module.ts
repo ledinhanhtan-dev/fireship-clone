@@ -1,21 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconComponent } from './components/icon/icon.component';
-import { VideoComponent } from './components/video/video.component';
-import { ButtonComponent } from './components/button/button.component';
-import { SafePipe } from './pipes/safe.pipe';
 import { RouterModule } from '@angular/router';
-import { BlockComponent } from './components/block/block.component';
+import { SafePipe } from './pipes/safe.pipe';
+
+import * as index from './components';
 
 @NgModule({
-  declarations: [
-    IconComponent,
-    VideoComponent,
-    SafePipe,
-    ButtonComponent,
-    BlockComponent,
-  ],
+  declarations: [index.components, SafePipe],
   imports: [CommonModule, RouterModule],
-  exports: [IconComponent, ButtonComponent, VideoComponent, BlockComponent],
+  exports: [index.components],
 })
 export class SharedModule {}

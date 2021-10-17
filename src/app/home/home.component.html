@@ -3,7 +3,11 @@
 <app-block
   heading="New Courses"
   subheading="Brand new courses and updates every month"
-></app-block>
+>
+  <div class="row">
+    <app-card [course]="course" *ngFor="let course of courses"></app-card>
+  </div>
+</app-block>
 
 <app-block
   heading="Learn By Doing"
@@ -18,6 +22,8 @@
 <app-block
   heading="New to Firebase?"
   subheading="Learn the basics in 25 minutes 👇"
+>
+  <div class="row"><app-card [course]="firebaseCourse"></app-card></div
 ></app-block>
 
 <app-block

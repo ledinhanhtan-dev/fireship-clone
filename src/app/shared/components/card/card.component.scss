@@ -1,0 +1,38 @@
+@import "/src/styles/variables";
+
+:host {
+  max-width: 720px;
+  box-shadow: $shadow-card;
+  background-color: $neutral-700;
+  border-radius: $radius-2;
+  text-align: center;
+  margin: 1rem auto;
+
+  transition: transform 300ms ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+a {
+  padding: 1rem;
+  display: block;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.75rem;
+  margin: 1rem 0 1.5rem;
+  background-color: $green-200;
+  border-radius: $radius-2;
+  font-weight: 700;
+
+  transition: transform 300ms ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-card;
+  }
+}
