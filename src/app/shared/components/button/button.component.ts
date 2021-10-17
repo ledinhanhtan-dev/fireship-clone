@@ -25,7 +25,5 @@ export class ButtonComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.color);
-  }
+  ngOnInit(): void {}
 }
