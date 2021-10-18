@@ -1,0 +1,62 @@
+@import "/src/styles/variables";
+
+:host {
+  display: block;
+}
+
+.row {
+  display: grid;
+  padding: 5rem 7vw 4rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include respond($md) {
+    padding: 4rem 7vw 3rem;
+  }
+
+  @include respond($sm) {
+    padding: 2rem 0rem;
+    display: block;
+  }
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: $radius-max;
+
+  @include respond($sm) {
+    max-width: 250px;
+  }
+}
+
+.content {
+  margin-left: 3vw;
+
+  @include respond($sm) {
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.text {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 300;
+
+  @include respond($md) {
+    font-size: 1.25rem;
+  }
+}
+
+code {
+  font-weight: 700;
+}
+
+.link {
+  @extend .text;
+  color: $blue-200;
+}
