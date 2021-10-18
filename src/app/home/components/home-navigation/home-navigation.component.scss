@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.buttons {
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+app-button {
+  margin: 10px 5px 0px 5px;
+}

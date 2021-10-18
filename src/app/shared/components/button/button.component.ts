@@ -22,6 +22,7 @@ export class ButtonComponent implements OnInit {
   @Input() size: Size = 'md';
   @Input() type: Type = 'outline';
   @Input() color: Color = 'neutral';
+  @Input() link: string = '';
 
   constructor() {}
 
