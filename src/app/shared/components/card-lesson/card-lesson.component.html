@@ -8,5 +8,7 @@
   <p class="desc">
     {{ lesson.desc }}
   </p>
-  <div class="tags"></div>
+  <div class="tags">
+    <app-tag *ngFor="let tag of lesson.tags" [tag]="tag" size="sm"></app-tag>
+  </div>
 </div>
