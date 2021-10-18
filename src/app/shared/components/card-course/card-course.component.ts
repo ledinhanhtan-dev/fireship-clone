@@ -7,7 +7,7 @@ import { Course } from '@core/models/course.model';
   styleUrls: ['./card-course.component.scss'],
 })
 export class CardCourseComponent implements OnInit {
-  @Input() withButton: boolean = false;
+  @Input() button: boolean = false;
   @Input() course!: Course;
 
   constructor() {}

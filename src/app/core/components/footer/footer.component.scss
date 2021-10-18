@@ -31,6 +31,10 @@ hr {
   margin-bottom: 0.5rem;
 }
 
+.link {
+  display: inline-flex;
+}
+
 .link-green:not(:last-child) {
   margin-right: 1rem;
 }

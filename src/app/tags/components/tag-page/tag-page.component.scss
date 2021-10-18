@@ -1,0 +1,45 @@
+@use "/src/styles/partials/tag-colors";
+
+@import "/src/styles/variables";
+
+:host {
+  display: block;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  padding: 0.3rem 1rem 0.5rem;
+  background-color: $neutral-600;
+  border-radius: $radius-2;
+  display: inline-block;
+}
+
+.desc {
+  line-height: 1.5;
+  font-size: 1.25rem;
+  color: $neutral-200;
+  border: 2px dashed $neutral-700;
+  border-radius: $radius-2;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
+
+  @include respond($md) {
+    font-size: 1rem;
+  }
+}
+
+.lessons {
+  display: grid;
+  gap: 2rem 1rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+  @include respond($sm) {
+    gap: 1rem;
+  }
+}
+
+.python {
+  color: #ffda5d;
+  background-color: $tag-python;
+}

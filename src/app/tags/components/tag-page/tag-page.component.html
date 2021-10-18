@@ -1,0 +1,13 @@
+<h1 [ngClass]="['d2', tag.name]">{{ tag.name }}</h1>
+<div class="desc">
+  {{ desc }}
+</div>
+
+<app-card-course [course]="course" [button]="true"></app-card-course>
+
+<div class="lessons">
+  <app-card-lesson
+    [lesson]="lesson"
+    *ngFor="let item of array"
+  ></app-card-lesson>
+</div>
