@@ -1,0 +1,49 @@
+<app-block
+  heading="New Courses"
+  subheading="Brand new courses and updates every month"
+>
+  <div class="row">
+    <app-card-course
+      [course]="course"
+      *ngFor="let course of newCourses"
+      [withButton]="true"
+    ></app-card-course>
+  </div>
+</app-block>
+
+<app-block
+  heading="Learn By Doing"
+  subheading="Fast, efficient, project-based video courses"
+>
+  <div class="row">
+    <app-card-course
+      [course]="course"
+      *ngFor="let course of doingCourses"
+    ></app-card-course>
+  </div>
+</app-block>
+
+<app-block
+  heading="Modern Full Stack"
+  subheading="Develop Faster with scalable could infrastructure"
+>
+  <div class="row">
+    <app-card-course
+      [course]="course"
+      *ngFor="let course of fullstackCourses"
+    ></app-card-course>
+  </div>
+</app-block>
+
+<app-block
+  heading="New to Firebase?"
+  subheading="Learn the basics in 25 minutes 👇"
+>
+  <div class="row">
+    <app-card-course [course]="firebaseCourse"></app-card-course>
+  </div>
+
+  <app-button size="lg" type="flat" color="green" class="all-courses"
+    >ALL PRO COURSES</app-button
+  >
+</app-block>

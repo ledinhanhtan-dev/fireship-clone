@@ -1,0 +1,11 @@
+@mixin card {
+  display: block;
+  border-radius: $radius-2;
+  background-color: $neutral-700;
+  transition: transform 300ms ease;
+  box-shadow: $shadow-card;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}

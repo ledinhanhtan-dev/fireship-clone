@@ -1,6 +1,6 @@
 @import "/src/styles/variables";
 
-.item {
+@mixin nav-item {
   display: flex;
   position: relative;
   align-items: center;

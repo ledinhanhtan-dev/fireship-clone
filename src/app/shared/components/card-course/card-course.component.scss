@@ -1,18 +1,12 @@
 @import "/src/styles/variables";
+@import "/src/styles/partials/card";
 
 :host {
+  @include card;
+
   max-width: 720px;
-  box-shadow: $shadow-card;
-  background-color: $neutral-700;
-  border-radius: $radius-2;
   text-align: center;
   margin: 1rem auto;
-
-  transition: transform 300ms ease;
-
-  &:hover {
-    transform: translateY(-3px);
-  }
 }
 
 .link {

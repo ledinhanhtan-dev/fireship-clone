@@ -1,0 +1,16 @@
+@import "/src/styles/variables";
+@import "/src/styles/partials/card";
+
+:host {
+  @include card;
+  max-width: 650px;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.desc {
+  font-weight: 300;
+}

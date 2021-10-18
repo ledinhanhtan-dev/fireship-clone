@@ -1,0 +1,12 @@
+<a [routerLink]="['/lessons', lesson.slug]" *ngIf="image">
+  <img [src]="lesson.image" [alt]="lesson.name" />
+</a>
+<div class="content">
+  <a [routerLink]="['/lessons', lesson.slug]">
+    <h3>{{ lesson.name }}</h3>
+  </a>
+  <p class="desc">
+    {{ lesson.desc }}
+  </p>
+  <div class="tags"></div>
+</div>
