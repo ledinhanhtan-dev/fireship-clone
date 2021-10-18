@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
     pathMatch: 'full',
   },
+  {
+    path: 'tags',
+    loadChildren: () => import('./tags/tags.module').then((m) => m.TagsModule),
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
