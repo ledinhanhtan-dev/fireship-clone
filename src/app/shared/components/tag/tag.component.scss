@@ -9,10 +9,22 @@ a {
   font-weight: 400;
   font-size: 0.875rem;
   border-radius: $radius-1;
+  background-color: $neutral-600;
+  color: $white;
   display: block;
 
-  color: $white;
-  background-color: $neutral-600;
+  transition: all 200ms ease;
+  transition-property: transform, box-shadow;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-tag;
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: none;
+  }
 }
 
 // Sizes
