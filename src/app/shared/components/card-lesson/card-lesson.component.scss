@@ -4,6 +4,7 @@
 :host {
   @include card;
   max-width: 650px;
+  position: relative;
   overflow: hidden;
 }
 
@@ -13,4 +14,12 @@
 
 .desc {
   font-weight: 300;
+}
+
+.youtube {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: $red-200;
+  padding: 1rem;
 }
