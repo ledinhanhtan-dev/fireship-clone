@@ -9,7 +9,7 @@ export const LESSONS: Lesson[] = [
       'https://fireship.io/lessons/react-native-firebase-chat-demo/img/featured.webp',
     tags: [
       { name: 'pro' },
-      { name: 'react' },
+      { name: 'electron' },
       { name: 'react-native' },
       { name: 'firebase' },
     ],
@@ -32,7 +32,7 @@ export const LESSONS: Lesson[] = [
     tags: [
       { name: 'pro' },
       { name: 'd3' },
-      { name: 'firebase' },
+      { name: 'typescript' },
       { name: 'javascript' },
     ],
   },

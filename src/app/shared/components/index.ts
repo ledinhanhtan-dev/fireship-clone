@@ -4,6 +4,7 @@ import { CardCourseComponent } from './card-course/card-course.component';
 import { CardLessonComponent } from './card-lesson/card-lesson.component';
 import { CardTweetComponent } from './card-tweet/card-tweet.component';
 import { IconComponent } from './icon/icon.component';
+import { TagComponent } from './tag/tag.component';
 import { VideoComponent } from './video/video.component';
 
 export const components: any[] = [
@@ -13,5 +14,6 @@ export const components: any[] = [
   CardLessonComponent,
   CardTweetComponent,
   IconComponent,
+  TagComponent,
   VideoComponent,
 ];
