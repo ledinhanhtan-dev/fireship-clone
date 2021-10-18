@@ -1,0 +1,16 @@
+<app-block
+  heading="Extraordinary Code Tutorials "
+  subheading="Fast-paced software dev content you'll enjoy watching"
+  [gradientHeading]="true"
+>
+  <div class="row-max">
+    <app-card-lesson [lesson]="lessons[0]" [image]="true"></app-card-lesson>
+  </div>
+
+  <div class="row">
+    <app-card-lesson
+      *ngFor="let lesson of lessons"
+      [lesson]="lesson"
+    ></app-card-lesson>
+  </div>
+</app-block>

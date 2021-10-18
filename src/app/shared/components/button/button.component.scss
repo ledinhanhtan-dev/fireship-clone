@@ -9,8 +9,9 @@
   color: $neutral-200;
   letter-spacing: 0.05ch;
   border-radius: $radius-2;
+  transition: all 300ms ease;
   border: 2px solid transparent;
-  transition: background-color 400ms ease;
+  transition-property: transform, background-color;
   text-transform: uppercase;
   justify-content: center;
   display: inline-flex;
@@ -52,6 +53,7 @@
   }
 
   &.flat {
+    color: $white;
     border-color: $color;
     background-color: $color;
   }

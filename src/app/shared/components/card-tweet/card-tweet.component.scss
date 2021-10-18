@@ -1,14 +1,14 @@
 @import "/src/styles/variables";
+@import "/src/styles/partials/card";
 
 :host {
-  display: block;
-  background-color: $neutral-700;
-  border-radius: $radius-4;
-  box-shadow: $shadow-card;
-  padding: 3rem 1.5rem;
-  position: relative;
-  color: $neutral-200;
+  @include card;
+
   margin-bottom: 2rem;
+  padding: 3rem 1.5rem;
+  border-radius: $radius-4;
+  color: $neutral-200;
+  position: relative;
 }
 
 app-icon {

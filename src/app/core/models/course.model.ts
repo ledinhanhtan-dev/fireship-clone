@@ -1,6 +1,6 @@
 export interface Course {
   name: string;
-  url: string;
+  slug: string;
   image: string;
   desc: string;
 }

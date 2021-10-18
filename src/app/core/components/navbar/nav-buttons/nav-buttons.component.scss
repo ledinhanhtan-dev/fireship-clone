@@ -1,9 +1,13 @@
-@use "/src/styles/partials/nav-item";
 @import "/src/styles/variables";
+@import "/src/styles/partials/nav-item";
 
 :host {
   display: flex;
   align-items: center;
+}
+
+.item {
+  @include nav-item;
 }
 
 .primary {

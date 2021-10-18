@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.row-max {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.row {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+  justify-content: space-evenly;
+}
