@@ -1,7 +1,7 @@
-<a [routerLink]="['/course', course.url]">
+<a [routerLink]="['/course', course.url]" class="link">
   <img [src]="course.image" [alt]="course.name" />
-  <h3>{{ course.name }}</h3>
-  <p>
+  <h3 class="name">{{ course.name }}</h3>
+  <p class="desc">
     {{ course.desc }}
   </p>
   <button *ngIf="withButton">START</button>

@@ -15,12 +15,12 @@
   }
 }
 
-a {
+.link {
   padding: 1rem;
   display: block;
 }
 
-p {
+.desc {
   @include respond($md) {
     margin-bottom: 0;
   }
