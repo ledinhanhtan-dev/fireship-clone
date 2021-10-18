@@ -1,5 +1,9 @@
 @import "/src/styles/variables";
 
+:host {
+  display: block;
+}
+
 .nav {
   top: 0;
   left: 0;
@@ -8,6 +12,7 @@
   padding: 0 1rem;
   height: $nav-height-desktop;
   background-color: $neutral-700;
+  box-shadow: $shadow-nav;
   align-items: center;
   position: fixed;
   display: flex;
@@ -15,4 +20,19 @@
   @include respond($md) {
     height: $nav-height-mobile;
   }
+
+  transition: top 300ms ease;
+}
+
+:host.hide .nav {
+  top: -4rem;
+
+  @include respond($md) {
+    top: -3rem;
+  }
+}
+
+app-nav-log,
+app-nav-buttons {
+  min-width: 15vw;
 }
