@@ -3,7 +3,22 @@
   alt="Loved by Developers since 2017"
 />
 <div class="grid">
-  <div class="column" *ngFor="let pack of packs.slice(0, 3)">
-    <app-card-tweet [tweet]="tweet" *ngFor="let tweet of pack"></app-card-tweet>
+  <div class="column">
+    <app-card-tweet
+      [tweet]="tweet"
+      *ngFor="let tweet of packs.slice(0, 2)"
+    ></app-card-tweet>
+  </div>
+  <div class="column">
+    <app-card-tweet
+      [tweet]="tweet"
+      *ngFor="let tweet of packs.slice(2, 4)"
+    ></app-card-tweet>
+  </div>
+  <div class="column">
+    <app-card-tweet
+      [tweet]="tweet"
+      *ngFor="let tweet of packs.slice(4, 6)"
+    ></app-card-tweet>
   </div>
 </div>
