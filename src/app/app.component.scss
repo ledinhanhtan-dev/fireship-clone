@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 
 .main {
-  padding: 1rem;
+  padding: $site-padding;
   margin-top: $nav-height-desktop;
 
   @include respond($md) {

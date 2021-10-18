@@ -1,0 +1,78 @@
+@import "/src/styles/variables";
+
+:host {
+  opacity: 0.8;
+  font-size: 17px;
+  color: $neutral-200;
+  padding: $site-padding;
+  padding-bottom: 3rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  display: flex;
+
+  @include respond($md) {
+    font-size: 0.875rem;
+  }
+}
+
+.separator {
+  align-self: stretch;
+  margin-bottom: 6rem;
+}
+
+app-icon {
+  margin-bottom: -4px;
+  display: inline-block;
+}
+
+hr {
+  margin-top: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.link-green:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.socials {
+  padding: 2rem 0;
+
+  & > a:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.twitter {
+  color: $blue-200;
+}
+
+.github {
+  color: $neutral-300;
+}
+
+.slack {
+  color: #ce1f5b;
+}
+
+.badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .badge {
+    height: 60px;
+
+    @include respond($sm) {
+      height: 40px;
+    }
+  }
+
+  & > a:first-child > .badge {
+    margin-right: 1rem;
+  }
+}
