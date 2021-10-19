@@ -12,6 +12,6 @@
     <app-tag *ngFor="let tag of lesson.tags" [tag]="tag" size="sm"></app-tag>
   </div>
 </div>
-<div class="youtube" *ngIf="lesson.free">
-  <app-icon iconId="youtube"></app-icon>
+<div class="youtube" *ngIf="!lesson.pro">
+  <app-icon iconId="youtube" [size]="image ? 'lg' : 'md'"></app-icon>
 </div>

@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.grid {
+  gap: 2rem;
+  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+  justify-content: space-evenly;
+  display: grid;
+}
+
+app-lessons-pagination {
+  margin-top: 3rem;
+}

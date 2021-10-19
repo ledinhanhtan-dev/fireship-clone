@@ -5,7 +5,7 @@ export interface Lesson {
   slug: string;
   desc: string;
   image: string;
-  free: boolean;
+  pro: boolean;
 
   tags: Tag[];
 }

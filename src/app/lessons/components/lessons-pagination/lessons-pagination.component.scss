@@ -1,0 +1,40 @@
+@import "/src/styles/variables";
+
+:host {
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  color: $neutral-100;
+}
+
+.item {
+  margin: 0.4rem;
+  border-radius: $radius-2;
+  background-color: $neutral-700;
+
+  &.active {
+    opacity: 0.5;
+  }
+
+  &.disable {
+    pointer-events: none;
+    background-color: transparent;
+  }
+}
+
+.item > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.6rem;
+
+  @include respond($md) {
+    padding: 0.625rem 1.125rem;
+  }
+}
