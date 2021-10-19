@@ -11,6 +11,11 @@ const routes: Routes = [
     path: 'tags',
     loadChildren: () => import('./tags/tags.module').then((m) => m.TagsModule),
   },
+  {
+    path: 'lessons',
+    loadChildren: () =>
+      import('./lessons/lessons.module').then((m) => m.LessonsModule),
+  },
 ];
 
 @NgModule({

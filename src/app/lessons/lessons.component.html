@@ -1,0 +1,10 @@
+<h1>What the latest lessons</h1>
+<hr />
+<div class="grid">
+  <app-card-lesson
+    *ngFor="let lesson of lessons"
+    [lesson]="lesson"
+    [image]="true"
+  ></app-card-lesson>
+</div>
+<app-lessons-pagination></app-lessons-pagination>
