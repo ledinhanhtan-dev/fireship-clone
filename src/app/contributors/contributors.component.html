@@ -1,0 +1,11 @@
+<h1>Contributors</h1>
+<hr />
+<div class="grid">
+  <a
+    class="card"
+    *ngFor="let contr of contributors"
+    [routerLink]="['/contributors', contr.slug]"
+  >
+    <h3>{{ contr.name }}</h3>
+  </a>
+</div>
