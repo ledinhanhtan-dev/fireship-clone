@@ -81,7 +81,8 @@ $transparent: transparent;
 
 // Gradients
 $gradient-100: linear-gradient(to right, $orange-200, $pink-200);
-$gradient-200: linear-gradient(to right, $green-100, $green-300);
+$gradient-200: linear-gradient(to right, $orange-300, $pink-300);
+$gradient-300: linear-gradient(to right, $green-100, $green-300);
 
 // Transition durations
 $duration-1: 100ms;

@@ -45,13 +45,36 @@
   background-color: $tag-go;
 }
 
+.google-maps {
+  color: #ffda5d;
+  background-color: #33a668;
+}
+
 .graphql {
   background-color: $tag-graphql;
+}
+
+.ionic {
+  color: $blue-200;
+  background-color: $white;
+}
+
+.ios {
+  color: $white;
+  background-color: $black;
 }
 
 .javascript {
   color: $black;
   background-color: $tag-javascript;
+}
+
+.machine-learning {
+  background-color: $purple-100;
+}
+
+.minimum-viable-product {
+  background: $gradient-200;
 }
 
 .node {
@@ -86,6 +109,11 @@
 .rpi {
   color: #222;
   background-color: $tag-rpi;
+}
+
+.rxjs {
+  color: #222;
+  background-color: $pink-200;
 }
 
 .svelte {

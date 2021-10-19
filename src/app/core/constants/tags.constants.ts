@@ -29,6 +29,7 @@ export const TAGS: Tag[] = [
   { name: 'graphql' },
   { name: 'electron' },
   { name: 'svelte' },
+  { name: 'google-maps' },
   { name: 'ios' },
   { name: 'angular' },
   { name: 'minimum-viable-product' },
