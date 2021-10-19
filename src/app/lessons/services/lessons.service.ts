@@ -19,4 +19,8 @@ export class LessonsService {
       .get<Lesson[]>(LESSONS_API)
       .pipe(tap(ls => console.log(ls)));
   }
+
+  getLessonBySlug(slug: string): Observable<Lesson> {
+    return this.http.get<Lesson>(LESSONS_API + slug);
+  }
 }
