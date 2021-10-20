@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { TAGS } from '@core/constants/tags.constants';
 import { Tag } from '@core/models/tag.model';
 
@@ -10,7 +11,9 @@ import { Tag } from '@core/models/tag.model';
 export class TagsComponent implements OnInit {
   tags: Tag[] = TAGS;
 
-  constructor() {}
+  constructor(private title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('Tags');
+  }
 }
