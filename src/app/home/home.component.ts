@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import {
   DOING_COURSES,
   FIREBASE_COURSE,
@@ -18,7 +19,9 @@ export class HomeComponent implements OnInit {
   fullstackCourses: Course[] = FULLSTACK_COURSES;
   firebaseCourse: Course = FIREBASE_COURSE;
 
-  constructor() {}
+  constructor(private title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('Fireship.io (clone)');
+  }
 }

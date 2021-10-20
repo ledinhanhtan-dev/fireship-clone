@@ -2,6 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Contributor } from '@core/models/contributor.model';
 import { Subscription } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 interface Link {
   [key: string]: string;
@@ -16,12 +17,13 @@ export class ContributorContentComponent implements OnInit, OnDestroy {
   private contrSub!: Subscription;
   contributor!: Contributor;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private title: Title, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.contrSub = this.route.data.subscribe(
-      data => (this.contributor = data[0]),
-    );
+    this.contrSub = this.route.data.subscribe(data => {
+      this.contributor = data[0];
+      this.title.setTitle(this.contributor.name);
+    });
   }
 
   ngOnDestroy(): void {
