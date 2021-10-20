@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TagResolver } from './tag.resolver';
+import { TagsResolver } from './tags.resolver';
 
 describe('TagResolver', () => {
-  let resolver: TagResolver;
+  let resolver: TagsResolver;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    resolver = TestBed.inject(TagResolver);
+    resolver = TestBed.inject(TagsResolver);
   });
 
   it('should be created', () => {
