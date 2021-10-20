@@ -1,6 +1,6 @@
-@use "/src/styles/partials/tag";
+@use '/src/styles/partials/tag';
 
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 :host {
   display: inline-block;
@@ -68,7 +68,7 @@ a {
   border-radius: $radius-2;
   margin-right: 10px;
   margin-top: 10px;
-  padding: 5px 8px;
+  padding: 7px 13px;
 
   @include respond($md) {
     @include md;

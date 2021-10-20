@@ -15,9 +15,7 @@ export class LessonsService {
   constructor(private http: HttpClient) {}
 
   getLessons(): Observable<Lesson[]> {
-    return this.http
-      .get<Lesson[]>(LESSONS_API)
-      .pipe(tap(ls => console.log(ls)));
+    return this.http.get<Lesson[]>(LESSONS_API);
   }
 
   getLessonBySlug(slug: string): Observable<Lesson> {
