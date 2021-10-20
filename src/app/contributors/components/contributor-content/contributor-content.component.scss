@@ -1,0 +1,50 @@
+@import '/src/styles/variables';
+@import '/src/styles/partials/button';
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 3rem;
+
+  @include respond($sm) {
+    padding: 3rem 1rem;
+  }
+}
+
+.avatar {
+  max-width: 200px;
+  margin-bottom: 1rem;
+  border-radius: $radius-max;
+  box-shadow: $shadow-card;
+
+  @include respond($md) {
+    max-width: 175px;
+  }
+}
+
+h1 {
+  text-align: center;
+  display: inline-block;
+  border-bottom: dashed 2px $neutral-700;
+  padding-bottom: 2rem;
+}
+
+app-contributor-link {
+  margin: 4px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.btn {
+  @include button;
+}
+
+.bio {
+  text-align: center;
+}

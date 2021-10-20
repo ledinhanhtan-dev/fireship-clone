@@ -10,7 +10,11 @@ import { Contributor } from '@core/models/contributor.model';
 export class ContributorsService {
   constructor(private http: HttpClient) {}
 
-  getContributors(): Observable<Contributor[]> {
+  getAllContributors(): Observable<Contributor[]> {
     return this.http.get<Contributor[]>(CONTRIBUTORS_API);
+  }
+
+  getContributor(slug: string): Observable<Contributor> {
+    return this.http.get<Contributor>(CONTRIBUTORS_API + slug);
   }
 }

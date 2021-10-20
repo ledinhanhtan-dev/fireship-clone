@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 :host {
   display: block;
@@ -43,9 +43,8 @@
 }
 
 .text {
-  font-size: 1.75rem;
-  line-height: 1.5;
   font-weight: 300;
+  font-size: 1.75rem;
 
   @include respond($md) {
     font-size: 1.25rem;

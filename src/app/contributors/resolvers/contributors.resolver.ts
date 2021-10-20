@@ -13,7 +13,9 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ContributorsResolver implements Resolve<Contributor[] | boolean> {
+export class ContributorsResolver
+  implements Resolve<Contributor[] | Contributor | boolean>
+{
   constructor(
     private router: Router,
     private contrService: ContributorsService,
@@ -22,12 +24,21 @@ export class ContributorsResolver implements Resolve<Contributor[] | boolean> {
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot,
-  ): Observable<Contributor[] | boolean> {
-    return this.contrService.getContributors().pipe(
-      catchError(error => {
+  ): Observable<Contributor[] | Contributor | boolean> {
+    const slug = route.params.slug;
+
+    return this.getOneOrGetAllContributors(slug).pipe(
+      catchError(() => {
         this.router.navigateByUrl('/not-found');
         return of(false);
       }),
     );
+  }
+
+  private getOneOrGetAllContributors(
+    slug: string | undefined,
+  ): Observable<Contributor | Contributor[]> {
+    if (slug) return this.contrService.getContributor(slug);
+    else return this.contrService.getAllContributors();
   }
 }
