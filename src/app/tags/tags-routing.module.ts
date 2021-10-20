@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TagPageComponent } from './components/tag-page/tag-page.component';
-import { TagResolver } from './resolvers/tag.resolver';
+import { TagContentComponent } from './components/tag-content/tag-content.component';
+import { TagsResolver } from './resolvers/tags.resolver';
 import { TagsComponent } from './tags.component';
 
 const routes: Routes = [
-  { path: '', component: TagsComponent },
-  { path: ':tagName', component: TagPageComponent, resolve: [TagResolver] },
+  { path: '', component: TagsComponent, resolve: [TagsResolver] },
+  { path: ':name', component: TagContentComponent, resolve: [TagsResolver] },
 ];
 
 @NgModule({

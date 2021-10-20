@@ -1,0 +1,16 @@
+@import '/src/styles/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+app-icon {
+  color: $neutral-200;
+  transition: color 300ms ease;
+
+  &:hover {
+    color: $neutral-100;
+  }
+}
