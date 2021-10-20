@@ -1,0 +1,49 @@
+<img [src]="contributor.avatar" [alt]="contributor.name" class="avatar" />
+
+<h1 class="d1">{{ contributor.name }} Contributor Bio</h1>
+
+<div class="links">
+  <app-contributor-link
+    type="github"
+    *ngIf="contributor.github"
+    [link]="contributor.github"
+  ></app-contributor-link>
+
+  <app-contributor-link
+    type="linkedin"
+    *ngIf="contributor.linkedin"
+    [link]="contributor.linkedin"
+  ></app-contributor-link>
+
+  <app-contributor-link
+    type="medium"
+    *ngIf="contributor.medium"
+    [link]="contributor.medium"
+  ></app-contributor-link>
+
+  <app-contributor-link
+    type="portfolio"
+    *ngIf="contributor.portfolio"
+    [link]="contributor.portfolio"
+  ></app-contributor-link>
+
+  <app-contributor-link
+    type="facebook"
+    *ngIf="contributor.facebook"
+    [link]="contributor.facebook"
+  ></app-contributor-link>
+
+  <app-contributor-link
+    type="twitter"
+    *ngIf="contributor.twitter"
+    [link]="contributor.twitter"
+  ></app-contributor-link>
+
+  <app-contributor-link
+    type="youtube"
+    *ngIf="contributor.youtube"
+    [link]="contributor.youtube"
+  ></app-contributor-link>
+</div>
+
+<p class="bio p1">{{ contributor.bio }}</p>

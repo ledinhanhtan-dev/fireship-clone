@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 :host {
   gap: 2rem;
@@ -14,7 +14,6 @@
 }
 
 .text {
-  line-height: 1.5;
   font-size: 1.875rem;
   color: $neutral-200;
 

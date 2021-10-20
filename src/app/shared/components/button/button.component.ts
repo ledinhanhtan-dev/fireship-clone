@@ -11,7 +11,7 @@ type Color =
 
 type Type = 'flat' | 'outline';
 
-type Size = 'sm' | 'md' | 'lg';
+type Size = 'sm' | 'md' | 'lg' | 'flat';
 
 @Component({
   selector: 'app-button',

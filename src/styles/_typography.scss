@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 body {
   font-size: 1rem;
@@ -16,7 +16,10 @@ h4 {
 .d1 {
   font-size: 3.5rem;
   @include respond($md) {
-    font-size: 3rem;
+    font-size: 2.875rem;
+  }
+  @include respond($sm) {
+    font-size: 2.5rem;
   }
 }
 
@@ -60,6 +63,7 @@ h5 {
 }
 
 p {
+  line-height: 1.5;
   font-size: 1.25rem;
   color: $neutral-200;
   @include respond($md) {
@@ -69,6 +73,9 @@ p {
 
 .p1 {
   font-size: 1.125rem;
+  @include respond($md) {
+    font-size: 1rem;
+  }
 }
 
 .p2 {
