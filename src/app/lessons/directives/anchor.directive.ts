@@ -10,24 +10,18 @@ export class AnchorDirective implements OnInit {
   constructor(private el: ElementRef, private router: Router) {}
 
   ngOnInit(): void {
-    const anchorLink = this.el.nativeElement! as HTMLAnchorElement;
-
-    this.addPlaceholderLink(anchorLink);
-    this.addScrollingFunction(anchorLink);
-  }
-
-  private addPlaceholderLink(anchorLink: HTMLAnchorElement) {
     const id = this.appAnchor;
     const url = this.router.url;
+    const anchorLink = this.el.nativeElement! as HTMLAnchorElement;
 
+    // Set anchor link
     anchorLink.setAttribute('href', url + '#' + id);
-  }
 
-  private addScrollingFunction(anchorLink: HTMLAnchorElement) {
-    const destinationEl = document.getElementById(this.appAnchor);
-
+    // Add scrolling function
     anchorLink.addEventListener('click', e => {
       e.preventDefault();
+
+      const destinationEl = document.getElementById(id);
 
       destinationEl?.scrollIntoView({
         block: 'start',

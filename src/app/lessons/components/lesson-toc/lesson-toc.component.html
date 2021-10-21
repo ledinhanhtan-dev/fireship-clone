@@ -1,35 +1,12 @@
 <ul class="list">
-  <li class="block">
-    <a class="block-title" appAnchor="setup">Setup</a>
-    <ul class="block-list">
-      <li>
-        <a appAnchor="install-the-tailwind-vs-code-extension">
-          Install the Tailwind VS Code extension
-        </a>
+  <li class="block" *ngFor="let block of toc">
+    <a class="block-parent" [appAnchor]="block.parent.dashed">{{
+      block.parent.title
+    }}</a>
+    <ul class="block-children">
+      <li *ngFor="let item of block.children">
+        <a [appAnchor]="item.dashed">{{ item.title }}</a>
       </li>
-      <li><a appAnchor="use-a-js-frame-work"> Use a JS Framework </a></li>
-    </ul>
-  </li>
-  <li class="block">
-    <a appAnchor="discord-inspired-icon-navbar" class="block-title"
-      >Discord-Inspired Icon Navbar</a
-    >
-    <ul class="block-list">
-      <li>
-        <a appAnchor="make-the-app-a-flexible-container">
-          Make the App a Flexible container
-        </a>
-      </li>
-      <li><a appAnchor="position-the-side-bar"> Position the Sidebar </a></li>
-      <li><a appAnchor=""> Add Icon Buttons </a></li>
-      <li><a appAnchor=""> Use Apply to Create custom classes </a></li>
-    </ul>
-  </li>
-  <li class="block">
-    <a href="#" class="block-title">Animated Tooltips</a>
-    <ul class="block-list">
-      <li><a appAnchor=""> Create Tooltip Container </a></li>
-      <li><a appAnchor=""> Animated with Group </a></li>
     </ul>
   </li>
 </ul>
