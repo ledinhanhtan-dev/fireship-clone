@@ -4,10 +4,24 @@
     url('/assets/fonts/cubano-regular-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Attribute Mono';
+  src: local('Attribute Mono'),
+    url('/assets/fonts/attribute-mono.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Attribute Mono';
+  src: local('Attribute Mono'),
+    url('/assets/fonts/attribute-mono-bold.woff') format('woff');
+  font-weight: bold;
+}
+
 // Typography
 $font-display: 'Cubano', sans-serif;
 $font-primary: 'Sofia Pro', sans-serif;
-$font-code: 'Source Code Pro', monospace;
+$font-code: 'Attribute Mono', monospace;
 
 // Colors
 // Neutral

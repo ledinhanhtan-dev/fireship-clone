@@ -10,15 +10,6 @@
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   background-color: $neutral-700;
   box-shadow: $shadow-nav;
-
-  &-name {
-    color: $neutral-200;
-    font-size: 1.125rem;
-
-    @include respond($md) {
-      font-size: 0.875rem;
-    }
-  }
 }
 
 app-icon {
@@ -26,6 +17,11 @@ app-icon {
   color: $neutral-200;
 }
 
-.highlight {
-  box-shadow: $shadow-card;
+.file-name {
+  color: $neutral-200;
+  font-size: 1.125rem;
+
+  @include respond($md) {
+    font-size: 0.875rem;
+  }
 }
