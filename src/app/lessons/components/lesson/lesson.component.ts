@@ -1,16 +1,16 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { Lesson } from '@core/models/lesson.model';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-lesson-content',
-  templateUrl: './lesson-content.component.html',
-  styleUrls: ['./lesson-content.component.scss'],
+  selector: 'app-lesson',
+  templateUrl: './lesson.component.html',
+  styleUrls: ['./lesson.component.scss'],
 })
-export class LessonContentComponent implements OnInit, OnDestroy {
-  lessonSub!: Subscription;
+export class LessonComponent implements OnInit {
+  private lessonSub!: Subscription;
   lesson!: Lesson;
 
   constructor(private title: Title, private route: ActivatedRoute) {}
@@ -18,6 +18,7 @@ export class LessonContentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.lessonSub = this.route.data.subscribe(data => {
       this.lesson = data[0];
+      console.log(this.lesson);
       this.title.setTitle(this.lesson.name);
     });
   }

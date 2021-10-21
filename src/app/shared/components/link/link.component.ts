@@ -4,12 +4,13 @@ import {
   ButtonSize,
   ButtonType,
 } from '@shared/models/button.model';
+
 @Component({
-  selector: 'app-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
+  selector: 'app-link',
+  templateUrl: './link.component.html',
+  styleUrls: ['./link.component.scss'],
 })
-export class ButtonComponent implements OnInit {
+export class LinkComponent implements OnInit {
   @Input() size: ButtonSize = 'md';
   @Input() type: ButtonType = 'outline';
   @Input() color: ButtonColor = 'neutral';

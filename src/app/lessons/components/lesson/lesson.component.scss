@@ -1,0 +1,30 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2vw;
+
+  @include respond($lg) {
+    flex-direction: column-reverse;
+  }
+
+  @include respond($md) {
+    padding: 4rem 0;
+  }
+}
+
+.content {
+  margin-right: 3rem;
+  display: block;
+  width: 75%;
+
+  @include respond($lg) {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

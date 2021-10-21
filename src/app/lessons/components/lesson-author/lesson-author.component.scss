@@ -1,0 +1,19 @@
+@import '/src/styles/variables';
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  max-width: 50px;
+  border-radius: $radius-max;
+  box-shadow: $shadow-card;
+  margin-right: 0.5rem;
+}
+
+p {
+  color: $white;
+  font-weight: 500;
+  font-style: italic;
+}

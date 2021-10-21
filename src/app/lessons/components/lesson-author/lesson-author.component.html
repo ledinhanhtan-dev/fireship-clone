@@ -1,0 +1,7 @@
+<img [src]="contributor.avatar" alt="" />
+<p>
+  By
+  <a [routerLink]="['/contributors', contributor.slug]" class="link">
+    {{ contributor.name }}
+  </a>
+</p>

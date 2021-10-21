@@ -1,0 +1,10 @@
+@import '/src/styles/variables';
+@import '/src/styles/partials/button';
+
+:host {
+  display: block;
+}
+
+.link {
+  @include button;
+}

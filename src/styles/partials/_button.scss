@@ -98,3 +98,8 @@
 .red {
   @include outline-flat($red-200);
 }
+
+.gray {
+  @include outline-flat($neutral-200);
+  color: $neutral-700 !important;
+}

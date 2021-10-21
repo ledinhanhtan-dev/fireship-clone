@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Cubano";
-  src: local("Cubano"),
-    url("/assets/fonts/cubano-regular-webfont.woff") format("woff");
+  font-family: 'Cubano';
+  src: local('Cubano'),
+    url('/assets/fonts/cubano-regular-webfont.woff') format('woff');
 }
 
 // Typography
-$font-display: "Cubano", sans-serif;
-$font-primary: "Sofia Pro", sans-serif;
-$font-code: "Source Code Pro", monospace;
+$font-display: 'Cubano', sans-serif;
+$font-primary: 'Sofia Pro', sans-serif;
+$font-code: 'Source Code Pro', monospace;
 
 // Colors
 // Neutral
@@ -94,6 +94,7 @@ $duration-5: 500ms;
 // Shadows
 $shadow-nav: 0px 0px 10px rgb(1, 1, 1);
 $shadow-tag: 0px 4px 5px rgba(0, 0, 0, 0.2);
+$shadow-toc: 0px 10px 20px rgba(0, 0, 0, 0.7);
 $shadow-card: 0px 4px 8px rgba(0, 0, 0, 0.4);
 
 // Border radius
@@ -117,9 +118,6 @@ $nav-height-desktop: 80px;
 $site-padding: 1rem;
 
 //  Mixins
-@mixin container {
-}
-
 @mixin respond($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
     @content;

@@ -1,0 +1,28 @@
+<app-video [src]="lesson.youtube | embed"></app-video>
+<div class="info">
+  <div class="info-desc">
+    <p class="desc">{{ lesson.desc }}</p>
+    <app-lesson-author [contributor]="lesson.contributor"></app-lesson-author>
+    <div class="timestamp">
+      <p class="timestamp-created">Created {{ lesson.createdAt | date }}</p>
+      <p class="timestamp-updated">
+        Last Updated {{ lesson.updatedAt | date }}
+      </p>
+    </div>
+  </div>
+
+  <div class="info-links">
+    <div class="lesson-links">
+      <app-link type="flat" color="gray" size="md">
+        <app-icon iconId="merged" size="sm"></app-icon> Code
+      </app-link>
+      <app-link type="flat" color="purple" size="md">
+        <app-icon iconId="slack" size="sm"></app-icon> Slack
+      </app-link>
+    </div>
+
+    <div class="lesson-tags">
+      <app-tag *ngFor="let tag of lesson.tags" [tag]="tag" size="sm"></app-tag>
+    </div>
+  </div>
+</div>

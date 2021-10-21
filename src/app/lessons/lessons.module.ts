@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LessonsComponent } from './lessons.component';
 import { SharedModule } from '@shared/shared.module';
 import { LessonsRoutingModule } from './lessons-routing.module';
-import { LessonsPaginationComponent } from './components/lessons-pagination/lessons-pagination.component';
-import { LessonContentComponent } from './components/lesson-content/lesson-content.component';
+import { LessonsComponent } from './lessons.component';
+
+import * as index from './components';
+import { EmbedPipe } from './pipes/embed.pipe';
+import { LessonAuthorComponent } from './components/lesson-author/lesson-author.component';
 
 @NgModule({
-  declarations: [LessonsComponent, LessonsPaginationComponent, LessonContentComponent],
+  declarations: [LessonsComponent, index.components, EmbedPipe, LessonAuthorComponent],
   imports: [CommonModule, SharedModule, LessonsRoutingModule],
 })
 export class LessonsModule {}
