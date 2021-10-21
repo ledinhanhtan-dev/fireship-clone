@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NEW_COURSES } from '@core/constants/courses.constant';
 import { TAGS } from '@core/constants/tags.constants';
 import { Course } from '@core/models/course.model';

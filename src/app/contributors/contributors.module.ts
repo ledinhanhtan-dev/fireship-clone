@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContributorsComponent } from './contributors.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ContributorsResolver } from './resolvers/contributors.resolver';
-import { ContributorContentComponent } from './components/contributor-content/contributor-content.component';
-import { SharedModule } from '@shared/shared.module';
+import { ContributorsComponent } from './contributors.component';
 import { ContributorLinkComponent } from './components/contributor-link/contributor-link.component';
+import { ContributorComponent } from './components/contributor/contributor.component';
+import { ContributorsResolver } from './resolvers/contributors.resolver';
+import { SharedModule } from '@shared/shared.module';
 
 const routes: Routes = [
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: ':slug',
-    component: ContributorContentComponent,
+    component: ContributorComponent,
     resolve: [ContributorsResolver],
   },
 ];
@@ -24,8 +24,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ContributorsComponent,
-    ContributorContentComponent,
     ContributorLinkComponent,
+    ContributorComponent,
   ],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
 })

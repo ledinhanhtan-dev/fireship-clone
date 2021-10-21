@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContributorContentComponent } from './contributor-content.component';
+import { ContributorComponent } from './contributor.component';
 
-describe('ContributorContentComponent', () => {
-  let component: ContributorContentComponent;
-  let fixture: ComponentFixture<ContributorContentComponent>;
+describe('ContributorComponent', () => {
+  let component: ContributorComponent;
+  let fixture: ComponentFixture<ContributorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContributorContentComponent ]
+      declarations: [ ContributorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContributorContentComponent);
+    fixture = TestBed.createComponent(ContributorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
