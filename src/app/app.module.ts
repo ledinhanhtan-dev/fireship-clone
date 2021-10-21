@@ -26,6 +26,7 @@ import {
         languages: {
           typescript: () => import('highlight.js/lib/languages/typescript'),
           javascript: () => import('highlight.js/lib/languages/javascript'),
+          xml: () => import('highlight.js/lib/languages/xml'),
           css: () => import('highlight.js/lib/languages/css'),
         },
       },

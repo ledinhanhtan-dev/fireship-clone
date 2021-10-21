@@ -2,12 +2,100 @@
 @import '~highlight.js/styles/base16/edge-dark.css';
 
 pre code.hljs {
-  padding: 2rem 1rem;
+  display: block;
+  overflow-x: auto;
   font-size: 1.1rem;
-  background-color: $code-bg;
-  color: $code-text;
-
+  padding: 2rem 1rem;
   @include respond($md) {
     font-size: 0.875rem;
   }
+}
+code.hljs {
+  padding: 3px 5px;
+}
+.hljs {
+  color: $code-text;
+  background-color: $code-bg;
+}
+.hljs ::selection,
+.hljs::selection {
+  background-color: #b7bec9;
+  color: #b7bec9;
+}
+.hljs-comment {
+  color: #3e4249;
+}
+.hljs-tag {
+  color: $code-text;
+}
+.hljs-operator,
+.hljs-punctuation,
+.hljs-subst {
+  color: #b7bec9;
+}
+.hljs-operator {
+  opacity: 0.7;
+}
+.hljs-attr,
+.hljs-bullet,
+.hljs-deletion,
+.hljs-link,
+.hljs-literal,
+.hljs-name,
+.hljs-number,
+.hljs-selector-tag,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-variable.constant_ {
+  color: $code-text;
+}
+.hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+  color: #dbb774;
+}
+.hljs-strong {
+  font-weight: 700;
+  color: #dbb774;
+}
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: #a3eea0;
+}
+.hljs-built_in,
+.hljs-doctag,
+.hljs-keyword.hljs-atrule,
+.hljs-quote,
+.hljs-regexp {
+  color: #5ebaa5;
+}
+.hljs-attribute,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-title.function_,
+.ruby .hljs-property {
+  color: #73b3e7;
+}
+.diff .hljs-meta,
+.hljs-keyword,
+.hljs-template-tag,
+.hljs-type {
+  color: #d390e7;
+  font-weight: bold;
+}
+.hljs-emphasis {
+  color: #d390e7;
+  font-style: italic;
+}
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: #5ebaa5;
+}
+.hljs-meta .hljs-keyword,
+.hljs-meta-keyword {
+  font-weight: 700;
 }
