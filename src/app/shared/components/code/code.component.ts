@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
+type Language = 'html' | 'css' | 'javascript' | 'typescript';
 @Component({
-  selector: 'app-code',
+  selector: 'app-code[language][fileName][code]',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.scss']
+  styleUrls: ['./code.component.scss'],
 })
 export class CodeComponent implements OnInit {
+  @Input() language!: string;
+  @Input() fileName!: string;
+  @Input() code!: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

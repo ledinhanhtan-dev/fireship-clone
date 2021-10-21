@@ -1,1 +1,7 @@
-<p>code works!</p>
+<div class="file">
+  <app-icon [iconId]="language" size="lg"></app-icon>
+  <div class="file-name">{{ fileName }}</div>
+</div>
+<div class="highlight">
+  <pre><code [highlight]="code" [languages]="[language]"></code></pre>
+</div>

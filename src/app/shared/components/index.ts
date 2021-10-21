@@ -3,7 +3,7 @@ import { ButtonComponent } from './button/button.component';
 import { CardCourseComponent } from './card-course/card-course.component';
 import { CardLessonComponent } from './card-lesson/card-lesson.component';
 import { CardTweetComponent } from './card-tweet/card-tweet.component';
-import { FileComponent } from './file/file.component';
+import { CodeComponent } from './code/code.component';
 import { IconComponent } from './icon/icon.component';
 import { LinkComponent } from './link/link.component';
 import { TagComponent } from './tag/tag.component';
@@ -17,7 +17,7 @@ export const components: any[] = [
   CardLessonComponent,
   CardTweetComponent,
   IconComponent,
-  FileComponent,
+  CodeComponent,
   TagComponent,
   VideoComponent,
 ];
