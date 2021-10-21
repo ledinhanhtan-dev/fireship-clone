@@ -1,27 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-type Color =
-  | 'neutral'
-  | 'blue'
-  | 'green'
-  | 'orange'
-  | 'pink'
-  | 'purple'
-  | 'red';
-
-type Type = 'flat' | 'outline';
-
-type Size = 'sm' | 'md' | 'lg' | 'flat';
-
+import {
+  ButtonColor,
+  ButtonSize,
+  ButtonType,
+} from '@shared/models/button.model';
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-  @Input() size: Size = 'md';
-  @Input() type: Type = 'outline';
-  @Input() color: Color = 'neutral';
+  @Input() size: ButtonSize = 'md';
+  @Input() type: ButtonType = 'outline';
+  @Input() color: ButtonColor = 'neutral';
   @Input() link: string = '';
 
   constructor() {}

@@ -32,11 +32,10 @@ a {
 // Sizes
 
 .sm {
+  margin: 3px;
   padding: 4px 7px;
   font-weight: 400;
   letter-spacing: 0.15ch;
-  margin-right: 6px;
-  margin-top: 6px;
 
   @include respond($md) {
     padding: 4px 5px 3px;
@@ -46,11 +45,10 @@ a {
 }
 
 @mixin md {
+  margin: 3.5px;
   font-weight: 700;
   font-size: 1.125rem;
   padding: 4px 7px 5px;
-  margin-right: 7px;
-  margin-top: 7px;
 }
 
 .md {
@@ -63,11 +61,10 @@ a {
 }
 
 .lg {
+  margin: 5px;
   font-weight: 700;
   font-size: 1.5rem;
   border-radius: $radius-2;
-  margin-right: 10px;
-  margin-top: 10px;
   padding: 7px 13px;
 
   @include respond($md) {

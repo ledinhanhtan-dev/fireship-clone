@@ -1,0 +1,27 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.file {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  background-color: $neutral-700;
+  box-shadow: $shadow-nav;
+}
+
+app-icon {
+  margin-right: 0.5rem;
+  color: $neutral-200;
+}
+
+.file-name {
+  color: $neutral-200;
+  font-size: 1.125rem;
+
+  @include respond($md) {
+    font-size: 0.875rem;
+  }
+}

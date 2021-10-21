@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LessonsComponent } from './lessons.component';
 import { SharedModule } from '@shared/shared.module';
 import { LessonsRoutingModule } from './lessons-routing.module';
-import { LessonsPaginationComponent } from './components/lessons-pagination/lessons-pagination.component';
-import { LessonContentComponent } from './components/lesson-content/lesson-content.component';
+import { LessonsComponent } from './lessons.component';
+import { YoutubePipe } from './pipes/youtube.pipe';
+import { HighlightModule } from 'ngx-highlightjs';
+
+import * as index from './components';
+import { AnchorDirective } from './directives/anchor.directive';
 
 @NgModule({
-  declarations: [LessonsComponent, LessonsPaginationComponent, LessonContentComponent],
-  imports: [CommonModule, SharedModule, LessonsRoutingModule],
+  declarations: [LessonsComponent, index.components, YoutubePipe, AnchorDirective],
+  imports: [CommonModule, SharedModule, LessonsRoutingModule, HighlightModule],
 })
 export class LessonsModule {}

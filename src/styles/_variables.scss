@@ -1,13 +1,27 @@
 @font-face {
-  font-family: "Cubano";
-  src: local("Cubano"),
-    url("/assets/fonts/cubano-regular-webfont.woff") format("woff");
+  font-family: 'Cubano';
+  src: local('Cubano'),
+    url('/assets/fonts/cubano-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Attribute Mono';
+  src: local('Attribute Mono'),
+    url('/assets/fonts/attribute-mono.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Attribute Mono';
+  src: local('Attribute Mono'),
+    url('/assets/fonts/attribute-mono-bold.woff') format('woff');
+  font-weight: bold;
 }
 
 // Typography
-$font-display: "Cubano", sans-serif;
-$font-primary: "Sofia Pro", sans-serif;
-$font-code: "Source Code Pro", monospace;
+$font-display: 'Cubano', sans-serif;
+$font-primary: 'Sofia Pro', sans-serif;
+$font-code: 'Attribute Mono', monospace;
 
 // Colors
 // Neutral
@@ -52,6 +66,10 @@ $red-100: #ff5c7c;
 $red-200: #ff3860;
 $red-300: #ff1443;
 
+// Code
+$code-text: #dee2f7;
+$code-bg: #22262f;
+
 // Tags
 $tag-android: #a4c34a;
 $tag-angular: #dc0530;
@@ -92,8 +110,9 @@ $duration-4: 400ms;
 $duration-5: 500ms;
 
 // Shadows
-$shadow-nav: 0px 0px 10px rgb(1, 1, 1);
+$shadow-nav: 0px 0px 10px rgba(1, 1, 1, 0.8);
 $shadow-tag: 0px 4px 5px rgba(0, 0, 0, 0.2);
+$shadow-toc: 0px 10px 20px rgba(0, 0, 0, 0.7);
 $shadow-card: 0px 4px 8px rgba(0, 0, 0, 0.4);
 
 // Border radius
@@ -117,9 +136,6 @@ $nav-height-desktop: 80px;
 $site-padding: 1rem;
 
 //  Mixins
-@mixin container {
-}
-
 @mixin respond($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
     @content;

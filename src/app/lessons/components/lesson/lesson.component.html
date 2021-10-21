@@ -1,0 +1,10 @@
+<h1 class="d1">{{ lesson.name }}</h1>
+<hr />
+<div class="flex">
+  <div class="content">
+    <app-lesson-video [lesson]="lesson"></app-lesson-video>
+    <app-lesson-content></app-lesson-content>
+  </div>
+  <app-lesson-toc></app-lesson-toc>
+</div>
+<app-lesson-qna></app-lesson-qna>

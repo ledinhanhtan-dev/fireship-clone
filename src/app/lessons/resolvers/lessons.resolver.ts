@@ -25,7 +25,7 @@ export class LessonsResolver implements Resolve<Lesson[] | boolean> {
 
     console.log(page);
 
-    return this.lsService.getLessons().pipe(
+    return this.lsService.getAllLessons().pipe(
       tap(ls => this.lsService.lessons$.next(ls)),
       catchError(error => {
         this.router.navigateByUrl('lessons');

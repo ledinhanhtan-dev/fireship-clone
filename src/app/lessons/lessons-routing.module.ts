@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LessonsResolver } from './resolvers/lessons.resolver';
 import { LessonsComponent } from './lessons.component';
-import { LessonContentComponent } from './components/lesson-content/lesson-content.component';
-import { LessonContentResolver } from './resolvers/lesson-content.resolver';
+import { LessonComponent } from './components/lesson/lesson.component';
+import { LessonResolver } from './resolvers/lesson.resolver';
 
 const routes: Routes = [
   { path: '', component: LessonsComponent, resolve: [LessonsResolver] },
@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'page', redirectTo: '' },
   {
     path: ':slug',
-    component: LessonContentComponent,
-    resolve: [LessonContentResolver],
+    component: LessonComponent,
+    resolve: [LessonResolver],
   },
 ];
 

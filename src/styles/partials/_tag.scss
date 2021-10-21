@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 // Colors - Background Colors
 
@@ -11,6 +11,7 @@
 }
 
 .css {
+  color: $neutral-700;
   background-color: $tag-css;
 }
 
@@ -97,8 +98,8 @@
 }
 
 .react {
-  color: #222;
-  background-color: $tag-react;
+  color: $tag-react;
+  background-color: #222;
 }
 
 .react-native {

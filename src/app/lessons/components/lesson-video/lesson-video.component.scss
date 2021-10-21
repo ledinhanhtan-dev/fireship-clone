@@ -1,0 +1,71 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.info {
+  padding: 1.5rem;
+  background-color: $neutral-700;
+  display: flex;
+
+  &-desc {
+    width: 50%;
+  }
+
+  &-links {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+}
+
+.desc {
+  margin-top: 0;
+}
+
+.timestamp {
+  margin-top: 1rem;
+  width: max-content;
+
+  &-created,
+  &-updated {
+    margin: 0;
+    padding: 3px 7px;
+    font-size: 0.875rem;
+    border-radius: $radius-1;
+
+    @include respond($md) {
+      font-size: 0.6rem;
+      padding: 2px 7px;
+    }
+  }
+
+  &-created {
+    margin-bottom: 3px;
+    border: 1px solid $neutral-600;
+    width: max-content;
+  }
+
+  &-updated {
+    font-weight: 600;
+    background-color: $neutral-600;
+  }
+}
+
+.lesson {
+  &-links {
+    display: flex;
+
+    & > app-link {
+      margin-left: 6px;
+    }
+  }
+
+  &-tags {
+    display: flex;
+    justify-items: flex-end;
+  }
+}

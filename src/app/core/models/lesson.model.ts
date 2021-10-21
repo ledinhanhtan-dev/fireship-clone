@@ -1,3 +1,4 @@
+import { Contributor } from './contributor.model';
 import { Tag } from './tag.model';
 
 export interface Lesson {
@@ -6,6 +7,11 @@ export interface Lesson {
   desc: string;
   image: string;
   pro: boolean;
+  youtube: string;
+  github: string;
+  createdAt: string;
+  updatedAt: string;
 
   tags: Tag[];
+  contributor: Contributor;
 }

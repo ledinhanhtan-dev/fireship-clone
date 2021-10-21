@@ -1,28 +1,48 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
-import { Lesson } from '@core/models/lesson.model';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lesson-content',
   templateUrl: './lesson-content.component.html',
   styleUrls: ['./lesson-content.component.scss'],
 })
-export class LessonContentComponent implements OnInit, OnDestroy {
-  lessonSub!: Subscription;
-  lesson!: Lesson;
+export class LessonContentComponent implements OnInit {
+  code = `import { BsPlus, BsFillLightningFill } from 'react-icons/bs';
+import { FaFire, FaPoo } from 'react-icons/fa';
 
-  constructor(private title: Title, private route: ActivatedRoute) {}
+const SideBar = () => {
+  return (
+    <div className="...">
+      <SideBarIcon icon={<FaFire size="28" />} />
+      <SideBarIcon icon={<BsPlus size="32" />} />
+      <SideBarIcon icon={<BsFillLightningFill size="20" />} />
+      <SideBarIcon icon={<FaPoo size="20" />} />
+    </div>
+  );
+};
 
-  ngOnInit(): void {
-    this.lessonSub = this.route.data.subscribe(data => {
-      this.lesson = data[0];
-      this.title.setTitle(this.lesson.name);
-    });
-  }
+const SideBarIcon = ({ icon }) => (
+  <div className="sidebar-icon group">
+    {icon}
+  </div>
+);`;
 
-  ngOnDestroy(): void {
-    if (this.lessonSub) this.lessonSub.unsubscribe();
-  }
+  code1 = `function App() {
+  return (
+    <div className="flex">
+    </div>
+  );
+}`;
+
+  code2 = `const SideBar = () => {
+  return (
+    <div className="fixed top-0 left-0 h-screen w-16 m-0
+                    flex flex-col
+                    bg-gray-900 text-white shadow-lg">
+    </div>
+  );
+};`;
+
+  constructor() {}
+
+  ngOnInit(): void {}
 }
