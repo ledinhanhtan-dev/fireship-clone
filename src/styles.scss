@@ -3,15 +3,6 @@
 @import './styles/reset';
 @import './styles/base';
 @import './styles/typography';
-@import './styles/variables';
-@import './styles/hightlightjs';
 
-body {
-  color: $white;
-  background-color: $neutral-800;
-}
-
-::selection {
-  color: $white;
-  background: $green-200;
-}
+@import './styles/partials/hightlightjs';
+@import './styles/partials/markdown';

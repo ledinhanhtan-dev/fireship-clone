@@ -1,5 +1,4 @@
 @import '/src/styles/variables';
-@import '/src/styles/partials/button';
 
 :host {
   display: flex;
@@ -39,10 +38,6 @@ app-contributor-link {
   flex-wrap: wrap;
   justify-content: center;
   margin: 1rem 0;
-}
-
-.btn {
-  @include button;
 }
 
 .bio {

@@ -9,14 +9,18 @@ import {
   HighlightOptions,
   HIGHLIGHT_OPTIONS,
 } from 'ngx-highlightjs';
+
+import { MarkdownModule } from 'ngx-markdown';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CoreModule,
     HighlightModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [
     {
