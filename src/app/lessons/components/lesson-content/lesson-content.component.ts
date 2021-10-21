@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HighlightAutoResult } from 'ngx-highlightjs';
 
 @Component({
   selector: 'app-lesson-content',
@@ -26,6 +25,22 @@ const SideBarIcon = ({ icon }) => (
     {icon}
   </div>
 );`;
+
+  code1 = `function App() {
+  return (
+    <div className="flex">
+    </div>
+  );
+}`;
+
+  code2 = `const SideBar = () => {
+  return (
+    <div className="fixed top-0 left-0 h-screen w-16 m-0
+                    flex flex-col
+                    bg-gray-900 text-white shadow-lg">
+    </div>
+  );
+};`;
 
   constructor() {}
 

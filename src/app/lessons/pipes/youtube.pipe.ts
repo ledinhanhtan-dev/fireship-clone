@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'embed',
+  name: 'youtube',
 })
-export class EmbedPipe implements PipeTransform {
+export class YoutubePipe implements PipeTransform {
   transform(youtube: string): string {
     return 'https://www.youtube.com/embed/' + youtube;
   }
