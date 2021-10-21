@@ -1,0 +1,13 @@
+@import '/src/styles/variables';
+@import '~highlight.js/styles/base16/edge-dark.css';
+
+pre code.hljs {
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  background-color: $code-bg;
+  color: $code-text;
+
+  @include respond($md) {
+    font-size: 0.875rem;
+  }
+}
