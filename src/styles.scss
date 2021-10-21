@@ -10,3 +10,8 @@ body {
   color: $white;
   background-color: $neutral-800;
 }
+
+::selection {
+  color: $white;
+  background: $green-200;
+}
