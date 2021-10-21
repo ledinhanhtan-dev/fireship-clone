@@ -1,0 +1,35 @@
+@import '/src/styles/variables';
+
+:host {
+  display: block;
+}
+
+.box {
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2.5rem;
+  background-color: $neutral-700;
+  box-shadow: $shadow-card;
+  max-width: $xl;
+}
+
+.copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & > p {
+    font-weight: 800;
+    margin: 0 1rem 0 0;
+    background-color: rgba($neutral-800, 0.5);
+    font-family: $font-code;
+    color: $purple-200;
+
+    @include respond($md) {
+      font-size: 0.875rem;
+    }
+  }
+
+  & > app-link {
+    flex-shrink: 0;
+  }
+}
