@@ -1,19 +1,15 @@
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Contributor } from '@core/models/contributor.model';
 import { Subscription } from 'rxjs';
-import { Title } from '@angular/platform-browser';
-
-interface Link {
-  [key: string]: string;
-}
 
 @Component({
-  selector: 'app-contributor-content',
-  templateUrl: './contributor-content.component.html',
-  styleUrls: ['./contributor-content.component.scss'],
+  selector: 'app-contributor',
+  templateUrl: './contributor.component.html',
+  styleUrls: ['./contributor.component.scss'],
 })
-export class ContributorContentComponent implements OnInit, OnDestroy {
+export class ContributorComponent implements OnInit, OnDestroy {
   private contrSub!: Subscription;
   contributor!: Contributor;
 

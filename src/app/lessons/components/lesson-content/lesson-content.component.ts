@@ -1,10 +1,5 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { stringHelper } from 'app/helpers/string-helper';
 import { TableOfContent, TocBlock } from 'app/lessons/models/toc.model';
 import { LessonsService } from 'app/lessons/services/lessons.service';
 import { MarkdownComponent } from 'ngx-markdown';
@@ -70,7 +65,7 @@ const SideBarIcon = ({ icon }) => (
 
     headings.forEach(h => {
       const title = h.textContent!;
-      const dashed = title.toLocaleLowerCase().split(' ').join('-');
+      const dashed = stringHelper.generateDashCase(title);
 
       // Set id
       h.setAttribute('id', dashed);
