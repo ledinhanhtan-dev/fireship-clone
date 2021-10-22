@@ -14,9 +14,10 @@ import { MarkdownModule } from 'ngx-markdown';
   imports: [
     CommonModule,
     SharedModule,
-    LessonsRoutingModule,
     HighlightModule,
+    LessonsRoutingModule,
     MarkdownModule.forChild(),
   ],
+  entryComponents: [],
 })
 export class LessonsModule {}

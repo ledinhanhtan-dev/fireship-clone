@@ -1,7 +1,7 @@
 <div class="file">
-  <app-icon [iconId]="languages[0]" size="lg"></app-icon>
+  <app-icon [iconId]="language" size="lg"></app-icon>
   <div class="file-name">{{ fileName }}</div>
 </div>
 <div class="highlight">
-  <pre><code [highlight]="code" [languages]="languages"></code></pre>
+  <pre><code [highlight]="code" [languages]="[language, 'html']"></code></pre>
 </div>
