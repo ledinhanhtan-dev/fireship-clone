@@ -1,8 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  OnInit,
+  Component,
+  ViewChild,
+  ComponentFactoryResolver,
+} from '@angular/core';
 import { stringHelper } from 'app/helpers/string-helper';
 import { TableOfContent, TocBlock } from 'app/lessons/models/toc.model';
 import { LessonsService } from 'app/lessons/services/lessons.service';
 import { MarkdownComponent } from 'ngx-markdown';
+
+import { CodeComponent } from '@shared/components/code/code.component';
+import { CodeDirective } from '@shared/directives/code.directive';
 
 @Component({
   selector: 'app-lesson-content',
@@ -46,9 +54,17 @@ const SideBarIcon = ({ icon }) => (
   );
 };`;
 
-  constructor(private lsService: LessonsService) {}
+  @ViewChild(CodeDirective, { static: true })
+  codeHost!: CodeDirective;
 
-  ngOnInit(): void {}
+  constructor(
+    private lsService: LessonsService,
+    private factory: ComponentFactoryResolver,
+  ) {}
+
+  ngOnInit(): void {
+    this.loadCode();
+  }
 
   onReady(markdown: MarkdownComponent): void {
     const nodeList = markdown.element.nativeElement.querySelectorAll(
@@ -82,5 +98,17 @@ const SideBarIcon = ({ icon }) => (
     });
 
     return toc;
+  }
+
+  private loadCode() {
+    const codeCmpFactory = this.factory.resolveComponentFactory(CodeComponent);
+    const vcr = this.codeHost.viewContainerRef;
+    vcr.clear();
+
+    const componentRef = vcr.createComponent<CodeComponent>(codeCmpFactory);
+
+    componentRef.instance.code = this.code1;
+    componentRef.instance.fileName = 'App.js';
+    componentRef.instance.language = 'javascript';
   }
 }

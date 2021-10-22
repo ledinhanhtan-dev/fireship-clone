@@ -7,7 +7,7 @@ type Language = 'html' | 'css' | 'javascript' | 'typescript';
   styleUrls: ['./code.component.scss'],
 })
 export class CodeComponent implements OnInit {
-  @Input() languages!: string[];
+  @Input() language!: Language;
   @Input() fileName!: string;
   @Input() code!: string;
 
