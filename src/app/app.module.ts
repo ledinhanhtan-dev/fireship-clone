@@ -9,15 +9,21 @@ import {
   HighlightOptions,
   HIGHLIGHT_OPTIONS,
 } from 'ngx-highlightjs';
+import { SharedModule } from '@shared/shared.module';
+import { MarkdownModule } from 'ngx-markdown';
+
+import * as e from './elements';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, e.elements],
   imports: [
     CoreModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     HighlightModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [
     {
