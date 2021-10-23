@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid {
+  gap: 2rem;
+  margin: 2rem 3vw;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 600px));
+  justify-content: center;
+  display: grid;
+}

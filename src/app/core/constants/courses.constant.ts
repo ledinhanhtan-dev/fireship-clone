@@ -51,3 +51,9 @@ export const FIREBASE_COURSE: Course = {
   image: 'https://fireship.io/lessons/firebase-quickstart/img/featured.jpg',
   desc: 'Learn the fundamental concepts needed to start building serious apps with Firebase.',
 };
+
+export const COURSES: Course[] = [
+  ...NEW_COURSES,
+  ...DOING_COURSES,
+  FIREBASE_COURSE,
+];
