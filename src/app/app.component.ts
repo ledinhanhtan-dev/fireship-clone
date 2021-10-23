@@ -2,6 +2,7 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { CodeComponent } from './elements/code/code.component';
 import { FileComponent } from './elements/file/file.component';
+import { ImgComponent } from './elements/img/img.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent implements OnInit {
     const elements: any[] = [
       [CodeComponent, 'code-element'],
       [FileComponent, 'file-element'],
+      [ImgComponent, 'img-element'],
     ];
 
     //

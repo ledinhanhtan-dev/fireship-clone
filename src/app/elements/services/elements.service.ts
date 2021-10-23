@@ -8,11 +8,13 @@ import {
 import { NgElement, WithProperties } from '@angular/elements';
 import { CodeComponent } from '../code/code.component';
 import { FileComponent } from '../file/file.component';
+import { ImgComponent } from '../img/img.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ElementsService {
+  private imgFactory: ComponentFactory<ImgComponent>;
   private fileFactory: ComponentFactory<FileComponent>;
   private codeFactory: ComponentFactory<CodeComponent>;
 
@@ -21,6 +23,8 @@ export class ElementsService {
     private applicationRef: ApplicationRef,
     private componentFactoryResolver: ComponentFactoryResolver,
   ) {
+    this.imgFactory =
+      this.componentFactoryResolver.resolveComponentFactory(ImgComponent);
     this.fileFactory =
       this.componentFactoryResolver.resolveComponentFactory(FileComponent);
     this.codeFactory =
@@ -34,6 +38,9 @@ export class ElementsService {
       const segments = p.textContent!.split('"');
       const lang = segments[1];
       const name = segments[3];
+
+      // Guard for empty lang or name
+      if (!lang || !name) return p.remove();
 
       // Create custom element (each)
       const fileEl = document.createElement('file-element') as NgElement &
@@ -71,6 +78,27 @@ export class ElementsService {
 
       pre.insertAdjacentElement('afterend', codeEl);
       pre.remove();
+    });
+  }
+
+  replaceByImgElements(paragraphs: HTMLParagraphElement[]) {
+    // Similar to steps above
+    paragraphs.forEach(p => {
+      const segments = p.textContent!.split('"');
+      const src = segments[1];
+
+      console.log(segments);
+
+      const imgEl = document.createElement('img-element') as NgElement &
+        WithProperties<ImgComponent>;
+
+      imgEl.src = src;
+
+      const codeRef = this.codeFactory.create(this.injector, [], imgEl);
+      this.applicationRef.attachView(codeRef.hostView);
+
+      p.insertAdjacentElement('afterend', imgEl);
+      p.remove();
     });
   }
 }

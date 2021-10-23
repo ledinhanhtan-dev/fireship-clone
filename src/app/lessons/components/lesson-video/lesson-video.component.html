@@ -1,4 +1,4 @@
-<app-video [src]="lesson.youtube | youtube"></app-video>
+<app-video *ngIf="lesson.youtube" [src]="lesson.youtube | youtube"></app-video>
 <div class="info">
   <div class="info-desc">
     <p class="desc">{{ lesson.desc }}</p>
@@ -13,10 +13,22 @@
 
   <div class="info-links">
     <div class="lesson-links">
-      <app-link type="flat" color="gray" size="md">
+      <app-link
+        size="md"
+        type="flat"
+        color="gray"
+        *ngIf="lesson.github"
+        [link]="lesson.github"
+      >
         <app-icon iconId="merged" size="sm"></app-icon> Code
       </app-link>
-      <app-link type="flat" color="purple" size="md">
+      <app-link
+        size="md"
+        type="flat"
+        color="purple"
+        *ngIf="lesson.slack"
+        [link]="lesson.slack"
+      >
         <app-icon iconId="slack" size="sm"></app-icon> Slack
       </app-link>
     </div>

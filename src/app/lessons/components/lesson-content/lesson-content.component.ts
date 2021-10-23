@@ -30,16 +30,30 @@ export class LessonContentComponent implements OnInit {
 
     this.replaceByFileElements(markdownEl);
     this.replaceByCodeElements(markdownEl);
+    this.replaceByImgElements(markdownEl);
     this.setIdAndGenerateToc(markdownEl);
   }
 
   private replaceByFileElements(markdownEl: HTMLElement) {
     const paragraphs = Array.from(markdownEl.querySelectorAll('p'));
     const fileParagraphs = paragraphs.filter(p => {
-      return p.textContent!.slice(0, 3) === '{{<';
+      return p.textContent!.slice(0, 8) === '{{< file';
     });
 
     this.elService.replaceByFileElements(fileParagraphs);
+  }
+
+  private replaceByImgElements(markdownEl: HTMLElement) {
+    const paragraphs = Array.from(markdownEl.querySelectorAll('p'));
+    const figureParagraphs = paragraphs.filter(p => {
+      return p.textContent!.slice(0, 8) === '{{< figu';
+    });
+
+    if (figureParagraphs.length < 1) return;
+
+    console.log(figureParagraphs);
+
+    this.elService.replaceByImgElements(figureParagraphs);
   }
 
   private replaceByCodeElements(markdownEl: HTMLElement) {

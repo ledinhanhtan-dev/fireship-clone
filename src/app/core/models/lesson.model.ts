@@ -10,6 +10,7 @@ export interface Lesson {
   content: string;
   youtube: string;
   github: string;
+  slack: string;
   createdAt: string;
   updatedAt: string;
 
