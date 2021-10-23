@@ -7,6 +7,7 @@ export interface Lesson {
   desc: string;
   image: string;
   pro: boolean;
+  content: string;
   youtube: string;
   github: string;
   createdAt: string;

@@ -1,4 +1,4 @@
-import { OnInit, Component } from '@angular/core';
+import { OnInit, Component, Input } from '@angular/core';
 import { stringHelper } from 'app/helpers/string-helper';
 import {
   TocItem,
@@ -15,6 +15,9 @@ import { MarkdownComponent } from 'ngx-markdown';
   styleUrls: ['./lesson-content.component.scss'],
 })
 export class LessonContentComponent implements OnInit {
+  @Input()
+  content!: string;
+
   constructor(
     private lsService: LessonsService,
     private elService: ElementsService,
