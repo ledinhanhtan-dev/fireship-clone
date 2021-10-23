@@ -23,8 +23,6 @@ export class LessonsResolver implements Resolve<Lesson[] | boolean> {
     let page = route.params.page;
     if (page === undefined) page = '1';
 
-    console.log(page);
-
     return this.lsService.getAllLessons().pipe(
       tap(ls => this.lsService.lessons$.next(ls)),
       catchError(error => {

@@ -2,9 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NEW_COURSES } from '@core/constants/courses.constant';
-import { TAGS } from '@core/constants/tags.constants';
 import { Course } from '@core/models/course.model';
-import { Lesson } from '@core/models/lesson.model';
 import { Tag } from '@core/models/tag.model';
 import { stringHelper } from 'app/helpers/string-helper';
 import { Subscription } from 'rxjs';
@@ -17,7 +15,7 @@ import { Subscription } from 'rxjs';
 export class TagContentComponent implements OnInit, OnDestroy {
   private tagSub!: Subscription;
 
-  tag: Tag = TAGS[2];
+  tag!: Tag;
   course: Course = NEW_COURSES[0];
   array = new Array(20).fill('');
 

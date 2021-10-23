@@ -1,7 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { TAGS } from '@core/constants/tags.constants';
 import { Tag } from '@core/models/tag.model';
 import { Subscription } from 'rxjs';
 
@@ -12,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class TagsComponent implements OnInit, OnDestroy {
   private tagsSub!: Subscription;
-  tags: Tag[] = TAGS;
+  tags: Tag[] = [];
 
   constructor(private title: Title, private route: ActivatedRoute) {}
 
