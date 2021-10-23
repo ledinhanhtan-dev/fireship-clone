@@ -1,5 +1,5 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appAnchor]',

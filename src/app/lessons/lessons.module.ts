@@ -7,10 +7,10 @@ import { LessonsComponent } from './lessons.component';
 import { HighlightModule } from 'ngx-highlightjs';
 import { MarkdownModule } from 'ngx-markdown';
 
-import * as index from './components';
+import * as c from './components';
 
 @NgModule({
-  declarations: [LessonsComponent, AnchorDirective, index.components],
+  declarations: [LessonsComponent, AnchorDirective, c.components],
   imports: [
     CommonModule,
     SharedModule,

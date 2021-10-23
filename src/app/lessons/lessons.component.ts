@@ -1,9 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { LessonsService } from './services/lessons.service';
-import { Lesson } from '@core/models/lesson.model';
-import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Lesson } from '@core/models/lesson.model';
 
 @Component({
   selector: 'app-lessons',
@@ -15,18 +14,14 @@ export class LessonsComponent implements OnInit, OnDestroy {
 
   lessons!: Lesson[];
 
-  constructor(
-    private title: Title,
-    private route: ActivatedRoute,
-    private lessonsService: LessonsService,
-  ) {}
+  constructor(private title: Title, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.title.setTitle('Lessons');
 
-    this.lessonsSub = this.route.data.subscribe(
-      data => (this.lessons = data[0]),
-    );
+    this.lessonsSub = this.route.data.subscribe(data => {
+      this.lessons = data[0];
+    });
   }
 
   ngOnDestroy(): void {

@@ -5,9 +5,9 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
 } from '@angular/router';
-import { Lesson } from '@core/models/lesson.model';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Lesson } from '@core/models/lesson.model';
 import { LessonsService } from '../services/lessons.service';
 
 @Injectable({

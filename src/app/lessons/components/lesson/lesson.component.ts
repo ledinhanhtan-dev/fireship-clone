@@ -18,7 +18,6 @@ export class LessonComponent implements OnInit {
   ngOnInit(): void {
     this.lessonSub = this.route.data.subscribe(data => {
       this.lesson = data[0];
-      console.log(this.lesson);
       this.title.setTitle(this.lesson.name);
     });
   }

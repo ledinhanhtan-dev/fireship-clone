@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LessonsResolver } from './resolvers/lessons.resolver';
 import { LessonsComponent } from './lessons.component';
 import { LessonComponent } from './components/lesson/lesson.component';
+import { LessonsResolver } from './resolvers/lessons.resolver';
 import { LessonResolver } from './resolvers/lesson.resolver';
 
 const routes: Routes = [
