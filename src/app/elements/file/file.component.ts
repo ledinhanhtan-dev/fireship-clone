@@ -24,8 +24,5 @@ export class FileComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this._lang);
-    console.log(this._name);
-  }
+  ngOnInit(): void {}
 }

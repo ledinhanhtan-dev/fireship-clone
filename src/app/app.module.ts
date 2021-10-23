@@ -9,9 +9,10 @@ import {
   HighlightOptions,
   HIGHLIGHT_OPTIONS,
 } from 'ngx-highlightjs';
+import { SharedModule } from '@shared/shared.module';
+import { MarkdownModule } from 'ngx-markdown';
 
 import * as e from './elements';
-import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, e.elements],
@@ -22,6 +23,7 @@ import { SharedModule } from '@shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     HighlightModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [
     {

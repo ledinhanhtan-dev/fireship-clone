@@ -1,79 +1,52 @@
-import {
-  OnInit,
-  Component,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-  Injector,
-  ApplicationRef,
-  ComponentFactoryResolver,
-} from '@angular/core';
+import { OnInit, Component } from '@angular/core';
 import { stringHelper } from 'app/helpers/string-helper';
 import {
-  TableOfContent,
-  TocBlock,
   TocItem,
+  TocBlock,
+  TableOfContent,
 } from 'app/lessons/models/toc.model';
 import { LessonsService } from 'app/lessons/services/lessons.service';
-import { SNIPPETS } from 'app/lessons/constants/snippets.constants';
-import { FileComponent } from 'app/elements/file/file.component';
-import { NgElement, WithProperties } from '@angular/elements';
+import { ElementsService } from 'app/elements/services/elements.service';
+import { MarkdownComponent } from 'ngx-markdown';
 
 @Component({
   selector: 'app-lesson-content',
   templateUrl: './lesson-content.component.html',
   styleUrls: ['./lesson-content.component.scss'],
 })
-export class LessonContentComponent implements OnInit, AfterViewInit {
-  @ViewChild('markdown')
-  markdownRef!: ElementRef;
-
-  snippets = SNIPPETS;
-
+export class LessonContentComponent implements OnInit {
   constructor(
     private lsService: LessonsService,
-
-    private injector: Injector,
-    private applicationRef: ApplicationRef,
-    private componentFactoryResolver: ComponentFactoryResolver,
+    private elService: ElementsService,
   ) {}
 
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    const markdownEl = this.markdownRef.nativeElement as HTMLDivElement;
-    const headings = Array.from(markdownEl.querySelectorAll('h2, h3'));
+  onReady(markdown: MarkdownComponent) {
+    const markdownEl = markdown.element.nativeElement;
 
-    const toc: TableOfContent = this.setIdAndGenerateToc(headings);
-    this.lsService.setTableOfContent(toc);
-
-    //
-
-    const cs = markdownEl.querySelectorAll('.code')!;
-
-    cs.forEach(c => {
-      const [lang, name] = c.textContent!.split(',');
-
-      console.log(lang, name);
-
-      const file = document.createElement('file-element') as NgElement &
-        WithProperties<FileComponent>;
-      file.lang = lang;
-      file.name = name;
-
-      const factory =
-        this.componentFactoryResolver.resolveComponentFactory(FileComponent);
-
-      const fileRef = factory.create(this.injector, [], file);
-
-      this.applicationRef.attachView(fileRef.hostView);
-
-      c.insertAdjacentElement('beforebegin', file);
-      c.remove();
-    });
+    this.replaceByFileElements(markdownEl);
+    this.replaceByCodeElements(markdownEl);
+    this.setIdAndGenerateToc(markdownEl);
   }
 
-  private setIdAndGenerateToc(headings: Element[]): TableOfContent {
+  private replaceByFileElements(markdownEl: HTMLElement) {
+    const paragraphs = Array.from(markdownEl.querySelectorAll('p'));
+    const fileParagraphs = paragraphs.filter(p => {
+      return p.textContent!.slice(0, 3) === '{{<';
+    });
+
+    this.elService.replaceByFileElements(fileParagraphs);
+  }
+
+  private replaceByCodeElements(markdownEl: HTMLElement) {
+    const pres = markdownEl.querySelectorAll('pre');
+    this.elService.replaceByCodeElements(pres);
+  }
+
+  private setIdAndGenerateToc(markdownEl: HTMLElement) {
+    const headings = markdownEl.querySelectorAll('h2, h3');
+
     let toc: TableOfContent = [];
 
     headings.forEach(h => {
@@ -86,6 +59,10 @@ export class LessonContentComponent implements OnInit, AfterViewInit {
       // Loop over all headings to generate Table of content
       const isH2 = h.closest('h2');
       if (isH2) {
+        // Also insert "hr" before each H2 (styling purpose)
+        const hrEl = document.createElement('hr');
+        isH2.insertAdjacentElement('afterend', hrEl);
+
         const tocBlock: TocBlock = { parent: { title, dashed }, children: [] };
         toc.push(tocBlock);
       } else {
@@ -94,6 +71,6 @@ export class LessonContentComponent implements OnInit, AfterViewInit {
       }
     });
 
-    return toc;
+    this.lsService.setTableOfContent(toc);
   }
 }
