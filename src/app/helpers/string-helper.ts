@@ -3,7 +3,7 @@ class StringHelper {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  generateDashCase(str: string): string {
+  toDashCase(str: string): string {
     return str.toLocaleLowerCase().split(' ').join('-');
   }
 }
