@@ -1,16 +1,12 @@
 @import '/src/styles/variables';
 
 :host {
-  display: block;
   margin-top: 1rem;
-}
-
-.file {
-  display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  background-color: $neutral-700;
   box-shadow: $shadow-card;
+  background-color: $neutral-700;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: inline-flex;
 }
 
 app-icon {
@@ -18,7 +14,7 @@ app-icon {
   color: $neutral-200;
 }
 
-.file-name {
+.name {
   color: $neutral-200;
   font-size: 1.125rem;
 
