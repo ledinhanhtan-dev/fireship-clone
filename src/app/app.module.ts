@@ -10,10 +10,14 @@ import {
   HIGHLIGHT_OPTIONS,
 } from 'ngx-highlightjs';
 
+import * as e from './elements';
+import { SharedModule } from '@shared/shared.module';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, e.elements],
   imports: [
     CoreModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

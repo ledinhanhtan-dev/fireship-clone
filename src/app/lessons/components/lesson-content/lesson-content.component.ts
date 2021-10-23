@@ -4,6 +4,9 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
+  Injector,
+  ApplicationRef,
+  ComponentFactoryResolver,
 } from '@angular/core';
 import { stringHelper } from 'app/helpers/string-helper';
 import {
@@ -13,6 +16,8 @@ import {
 } from 'app/lessons/models/toc.model';
 import { LessonsService } from 'app/lessons/services/lessons.service';
 import { SNIPPETS } from 'app/lessons/constants/snippets.constants';
+import { FileComponent } from 'app/elements/file/file.component';
+import { NgElement, WithProperties } from '@angular/elements';
 
 @Component({
   selector: 'app-lesson-content',
@@ -25,7 +30,13 @@ export class LessonContentComponent implements OnInit, AfterViewInit {
 
   snippets = SNIPPETS;
 
-  constructor(private lsService: LessonsService) {}
+  constructor(
+    private lsService: LessonsService,
+
+    private injector: Injector,
+    private applicationRef: ApplicationRef,
+    private componentFactoryResolver: ComponentFactoryResolver,
+  ) {}
 
   ngOnInit(): void {}
 
@@ -35,6 +46,31 @@ export class LessonContentComponent implements OnInit, AfterViewInit {
 
     const toc: TableOfContent = this.setIdAndGenerateToc(headings);
     this.lsService.setTableOfContent(toc);
+
+    //
+
+    const cs = markdownEl.querySelectorAll('.code')!;
+
+    cs.forEach(c => {
+      const [lang, name] = c.textContent!.split(',');
+
+      console.log(lang, name);
+
+      const file = document.createElement('file-element') as NgElement &
+        WithProperties<FileComponent>;
+      file.lang = lang;
+      file.name = name;
+
+      const factory =
+        this.componentFactoryResolver.resolveComponentFactory(FileComponent);
+
+      const fileRef = factory.create(this.injector, [], file);
+
+      this.applicationRef.attachView(fileRef.hostView);
+
+      c.insertAdjacentElement('beforebegin', file);
+      c.remove();
+    });
   }
 
   private setIdAndGenerateToc(headings: Element[]): TableOfContent {
