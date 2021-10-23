@@ -7,17 +7,10 @@ import { HighlightModule } from 'ngx-highlightjs';
 
 import * as index from './components';
 import { AnchorDirective } from './directives/anchor.directive';
-import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [LessonsComponent, AnchorDirective, index.components],
-  imports: [
-    CommonModule,
-    SharedModule,
-    HighlightModule,
-    LessonsRoutingModule,
-    MarkdownModule.forChild(),
-  ],
+  imports: [CommonModule, SharedModule, HighlightModule, LessonsRoutingModule],
   entryComponents: [],
 })
 export class LessonsModule {}

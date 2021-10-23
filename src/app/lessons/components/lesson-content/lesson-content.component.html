@@ -1,13 +1,78 @@
-<!-- <ng-template codeHost language="js" fileName="Sidebar.js"></ng-template>
-<ng-template codeHost language="js" fileName="Sidebar.js"></ng-template> -->
-
-<ng-template codeHost language="js" fileName="App.js"></ng-template>
-<div #markdown class="markdown"></div>
-
-<!-- <div
-  markdown
-  #markdownComponent
-  class="markdown"
-  src="/assets/md/index.md"
-  (ready)="onReady(markdownComponent)"
-></div> -->
+<div #markdown class="markdown">
+  <p>
+    The following tutorial will get you up and running with
+    <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>,
+    empowering you to build a beautiful, responsive, and animated websites
+    quickly. We will build a side navigation menu inspired by Discord.
+  </p>
+  <h2>Setup</h2>
+  <hr />
+  <h3>Install the Tailwind VS Code extension</h3>
+  <p>
+    Install the
+    <a
+      href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+      target="_blank"
+      >Tailwind VS Code</a
+    >
+    extension.
+  </p>
+  <h3>Use a JS framework</h3>
+  <p>
+    Feel free to use the JS framework of your choice. This tutorial uses
+    <a
+      href="https://tailwindcss.com/docs/guides/create-react-app"
+      target="_blank"
+    >
+      Create React App</a
+    >.
+  </p>
+  <h2>Discord-Inspired Icon Navbar</h2>
+  <hr />
+  <h3>Make the app a flexible container</h3>
+  <p>
+    Create a
+    <a href="https://youtu.be/K74l26pE4YA" target="_blank">flexbox</a> row by
+    simply adding the flex utility to the parent element.
+  </p>
+  <app-code lang="js" fileName="App.js" [code]="snippets.code1"></app-code>
+  <h3>Position the Sidebar</h3>
+  <p>
+    Combine Tailwind utility classes to position the sidebar. When hovering over
+    each class in VS Code, it will display its true CSS values.
+  </p>
+  <app-code lang="js" fileName="Sidebar.js" [code]="snippets.code2"></app-code>
+  <h3>Add icon buttons</h3>
+  <p>To quickly add an icon button to the navbar, install react-icons.</p>
+  <app-code
+    lang="terminal"
+    fileName="command line"
+    code="npm install react-icons"
+  ></app-code>
+  <app-code lang="js" fileName="Sidebar.js" [code]="snippets.code3"></app-code>
+  <h3>Use apply to create custom classes</h3>
+  <p>
+    The <code>@apply</code> directive allows you to compose custom CSS classes
+    by combining Tailwind classes. It can be useful in situations where
+    extracting a JS component does not make sense.
+  </p>
+  <app-code lang="css" fileName="index.css" [code]="snippets.code4"></app-code>
+  <p>
+    The tailwind <code>group</code> class does not work within
+    <code>@apply</code>. It must be used inline.
+  </p>
+  <h2>Animated Tooltips</h2>
+  <hr />
+  <h3>Create Tooltip Container</h3>
+  <p>Each icon button has a tooltip as a child that is invisible by default.</p>
+  <app-code lang="js" fileName="Sidebar.js" [code]="snippets.code5"></app-code>
+  <app-code lang="css" fileName="index.css" [code]="snippets.code6"></app-code>
+  <h3>Animated with Group</h3>
+  <p>Create groups to animate a child when the state of the parent changes.</p>
+  <p>
+    The <code>@apply</code> directive allows you to compose custom CSS classes
+    by combining Tailwind classes. It can be useful in situations where
+    extracting a JS component does not make sense.
+  </p>
+  <app-code lang="js" fileName="Sidebar.js" [code]="snippets.code7"></app-code>
+</div>

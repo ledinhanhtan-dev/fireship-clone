@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TableOfContent } from 'app/lessons/models/toc.model';
 import { LessonsService } from 'app/lessons/services/lessons.service';
-import { Subscription } from 'rxjs';
+import { Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'app-lesson-toc',
@@ -15,7 +15,10 @@ export class LessonTocComponent implements OnInit, OnDestroy {
   constructor(private lsService: LessonsService) {}
 
   ngOnInit(): void {
-    this.tocSub = this.lsService.toc$.subscribe(toc => (this.toc = toc));
+    timer(0).subscribe(
+      () =>
+        (this.tocSub = this.lsService.toc$.subscribe(toc => (this.toc = toc))),
+    );
   }
 
   ngOnDestroy(): void {

@@ -4,12 +4,11 @@ import { RouterModule } from '@angular/router';
 import { HighlightModule } from 'ngx-highlightjs';
 
 import * as c from './components';
-import * as d from './directives';
 import * as p from './pipes';
 
 @NgModule({
-  declarations: [c.components, p.pipes, d.directives],
+  declarations: [c.components, p.pipes],
   imports: [CommonModule, RouterModule, HighlightModule],
-  exports: [c.components, p.pipes, d.directives],
+  exports: [c.components, p.pipes],
 })
 export class SharedModule {}
