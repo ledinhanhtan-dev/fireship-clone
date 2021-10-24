@@ -14,8 +14,8 @@
 .avatar {
   max-width: 200px;
   margin-bottom: 1rem;
-  border-radius: $radius-max;
-  box-shadow: $shadow-card;
+  border-radius: var(--radius-max);
+  box-shadow: var(--shadow-card);
 
   @include respond($md) {
     max-width: 175px;
@@ -25,7 +25,7 @@
 h1 {
   text-align: center;
   display: inline-block;
-  border-bottom: dashed 2px $neutral-700;
+  border-bottom: dashed 2px var(--neutral-700);
   padding-bottom: 2rem;
 }
 

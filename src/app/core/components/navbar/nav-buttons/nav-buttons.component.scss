@@ -1,10 +1,10 @@
-@import "/src/styles/variables";
-@import "/src/styles/partials/nav-item";
+@import '/src/styles/variables';
+@import '/src/styles/partials/nav-item';
 
 :host {
   display: flex;
-  min-width: 15vw;
   align-items: center;
+  min-width: 15vw;
 }
 
 .item {
@@ -12,7 +12,7 @@
 }
 
 .primary {
-  color: $neutral-400;
+  color: var(--nav-icon-primary);
 }
 
 .svg {
@@ -24,11 +24,11 @@
 }
 
 .tooltip {
-  color: $white;
+  color: white;
   padding: 4px 6px;
   font-size: 0.875rem;
-  background-color: $neutral-400;
-  border-radius: $radius-1;
+  background-color: var(--neutral-400);
+  border-radius: var(--radius-1);
   letter-spacing: 0.15ch;
   display: inline-block;
   position: absolute;
@@ -38,19 +38,19 @@
   }
 
   &.search {
-    background-color: $blue-200;
+    background-color: var(--blue-200);
   }
 
   &.pro {
-    background-color: $green-200;
+    background-color: var(--green-200);
   }
 
   &.theme {
-    background-color: $neutral-400;
+    background-color: var(--neutral-400);
   }
 
   &.login {
-    background-color: $purple-200;
+    background-color: var(--purple-200);
   }
 
   opacity: 0;

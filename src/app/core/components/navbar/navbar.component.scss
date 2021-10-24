@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 :host {
   display: block;
@@ -11,8 +11,8 @@
   z-index: 999;
   padding: 0 1rem;
   height: $nav-height-desktop;
-  background-color: $neutral-700;
-  box-shadow: $shadow-nav;
+  background-color: var(--bg-nav);
+  box-shadow: var(--shadow-nav);
   align-items: center;
   position: fixed;
   display: flex;

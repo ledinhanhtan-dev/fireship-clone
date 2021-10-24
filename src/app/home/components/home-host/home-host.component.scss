@@ -26,7 +26,7 @@
 }
 
 .avatar {
-  border-radius: $radius-max;
+  border-radius: var(--radius-max);
 
   @include respond($sm) {
     max-width: 250px;

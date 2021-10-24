@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 :host {
   display: block;
@@ -10,13 +10,14 @@
   align-items: center;
   justify-content: center;
   font-size: 0.8125rem;
-  color: $neutral-100;
+  color: var(--cl-text);
 }
 
 .item {
   margin: 0.4rem;
-  border-radius: $radius-2;
-  background-color: $neutral-700;
+  border-radius: var(--radius-2);
+  background-color: var(--bg-card);
+  transition: transform 200ms ease;
 
   &.active {
     opacity: 0.5;
@@ -25,6 +26,10 @@
   &.disable {
     pointer-events: none;
     background-color: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
   }
 }
 

@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 @mixin nav-item {
   display: flex;
@@ -8,11 +8,11 @@
   justify-content: center;
   transition: color 500ms ease;
   height: $nav-height-mobile;
-  color: $neutral-600;
+  color: var(--cl-text);
   margin: 0 1rem;
 
   &:hover {
-    color: $white;
+    color: var(--cl-heading);
   }
 
   @include respond($md) {

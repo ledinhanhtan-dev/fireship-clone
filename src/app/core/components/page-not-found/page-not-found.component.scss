@@ -7,10 +7,10 @@
 }
 
 app-icon {
-  color: $neutral-200;
+  color: var(--cl-text);
   transition: color 300ms ease;
 
   &:hover {
-    color: $neutral-100;
+    color: var(--cl-heading);
   }
 }

@@ -1,5 +1,5 @@
-@import "/src/styles/variables";
-@import "/src/styles/partials/nav-item";
+@import '/src/styles/variables';
+@import '/src/styles/partials/nav-item';
 
 :host {
   display: flex;
@@ -16,8 +16,8 @@
   @include nav-item;
 
   font-size: 1.25rem;
-  color: $neutral-200;
-  font-family: $font-display;
+  color: var(--cl-text);
+  font-family: var(--font-display);
   transition: color 300ms ease;
   flex-direction: row;
 }
@@ -29,11 +29,11 @@
 }
 
 .primary {
-  color: $neutral-400;
+  color: var(--nav-icon-primary);
 }
 
 .secondary {
-  color: $neutral-600;
+  color: var(--nav-icon-secondary);
 }
 
 .primary,
@@ -43,10 +43,10 @@
 
 .item:hover {
   .primary {
-    color: $neutral-300;
+    color: var(--cl-text);
   }
 
   .secondary {
-    color: $white;
+    color: var(--cl-heading);
   }
 }

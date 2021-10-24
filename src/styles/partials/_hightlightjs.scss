@@ -14,19 +14,19 @@ code.hljs {
   padding: 3px 5px;
 }
 .hljs {
-  color: $code-text;
-  background-color: $code-bg;
+  color: var(--cl-text);
+  background-color: var(--bg-code);
 }
 .hljs ::selection,
 .hljs::selection {
-  background-color: #b7bec9;
-  color: #b7bec9;
+  background-color: var(--green-200);
+  color: var(--neutral-0);
 }
 .hljs-comment {
   color: #3e4249;
 }
 .hljs-tag {
-  color: $code-text;
+  color: var(--cl-text);
 }
 .hljs-operator,
 .hljs-punctuation,
@@ -48,7 +48,7 @@ code.hljs {
 .hljs-template-variable,
 .hljs-variable,
 .hljs-variable.constant_ {
-  color: $code-text;
+  color: var(--cl-text);
 }
 .hljs-selector-class {
   color: #fdce68;
@@ -101,4 +101,32 @@ code.hljs {
 .hljs-meta .hljs-keyword,
 .hljs-meta-keyword {
   font-weight: 700;
+}
+
+.theme-light {
+  .diff .hljs-meta,
+  .hljs-keyword,
+  .hljs-template-tag,
+  .hljs-type {
+    color: darken(#d390e7, 10%);
+  }
+  .hljs-emphasis {
+    color: darken(#d390e7, 10%);
+  }
+  .hljs-attribute,
+  .hljs-function .hljs-title,
+  .hljs-section,
+  .hljs-title.function_,
+  .ruby .hljs-property {
+    color: darken(#73b3e7, 20%);
+  }
+  .hljs-addition,
+  .hljs-code,
+  .hljs-string,
+  .hljs-title.class_.inherited__ {
+    color: darken(#a3eea0, 35%);
+  }
+  .hljs-selector-class {
+    color: darken(#fdce68, 10%);
+  }
 }
