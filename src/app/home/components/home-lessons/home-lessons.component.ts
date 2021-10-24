@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Lesson } from '@core/models/lesson.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { Lesson } from '@core/models/lesson.model';
   styleUrls: ['./home-lessons.component.scss'],
 })
 export class HomeLessonsComponent implements OnInit {
-  lessons: Lesson[] = [];
+  @Input() lessons!: Lesson[];
 
   constructor() {}
 

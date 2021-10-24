@@ -5,8 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 import * as index from './components';
+import { HomeResolver } from './resolvers/home.resolver';
 
-const routes: Routes = [{ path: '', component: HomeComponent }];
+const routes: Routes = [
+  { path: '', component: HomeComponent, resolve: [HomeResolver] },
+];
 
 @NgModule({
   declarations: [HomeComponent, index.components],
