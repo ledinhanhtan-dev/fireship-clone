@@ -87,8 +87,6 @@ export class ElementsService {
       const segments = p.textContent!.split('"');
       const src = segments[1];
 
-      console.log(segments);
-
       const imgEl = document.createElement('img-element') as NgElement &
         WithProperties<ImgComponent>;
 

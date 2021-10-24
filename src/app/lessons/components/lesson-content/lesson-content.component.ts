@@ -49,10 +49,6 @@ export class LessonContentComponent implements OnInit {
       return p.textContent!.slice(0, 8) === '{{< figu';
     });
 
-    if (figureParagraphs.length < 1) return;
-
-    console.log(figureParagraphs);
-
     this.elService.replaceByImgElements(figureParagraphs);
   }
 
