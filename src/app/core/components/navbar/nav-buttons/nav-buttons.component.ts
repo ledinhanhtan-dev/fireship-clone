@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '@core/services/theme.service';
 
 @Component({
   selector: 'app-nav-buttons',
@@ -6,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-buttons.component.scss'],
 })
 export class NavButtonsComponent implements OnInit {
-  constructor() {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {}
 
   onSwitchTheme() {
-    document.body.classList.toggle('theme-light');
-    document.body.classList.toggle('theme-dark');
+    this.themeService.switchTheme();
   }
 }

@@ -68,9 +68,9 @@ $colors: (
   --neutral-900: #090b0d;
 
   @each $name, $color in $colors {
-    --#{$name}-100: #{lighten($color, 7%)};
-    --#{$name}-200: #{$color};
-    --#{$name}-300: #{darken($color, 7%)};
+    --#{"" + $name}-100: #{lighten($color, 7%)};
+    --#{"" + $name}-200: #{$color};
+    --#{"" + $name}-300: #{darken($color, 7%)};
   }
 
   --gradient-100: linear-gradient(
