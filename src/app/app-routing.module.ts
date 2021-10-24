@@ -40,7 +40,9 @@ const routerOptions: ExtraOptions = {
 };
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerOptions)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
