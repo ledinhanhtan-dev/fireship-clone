@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fireship-clone": {
+      "hosting": {
+        "client": [
+          "fireship-clone"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fireship-clone"
+  }
+}
