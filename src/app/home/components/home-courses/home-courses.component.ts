@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '@core/models/course.model';
 import {
   DOING_COURSES,
@@ -6,6 +6,7 @@ import {
   FULLSTACK_COURSES,
   NEW_COURSES,
 } from '@core/constants/courses.constant';
+import { HomeContent } from 'app/home/models/home-content.model';
 
 @Component({
   selector: 'app-home-courses',
@@ -13,10 +14,7 @@ import {
   styleUrls: ['./home-courses.component.scss'],
 })
 export class HomeCoursesComponent implements OnInit {
-  newCourses: Course[] = NEW_COURSES;
-  doingCourses: Course[] = DOING_COURSES;
-  fullstackCourses: Course[] = FULLSTACK_COURSES;
-  firebaseCourse: Course = FIREBASE_COURSE;
+  @Input() home!: HomeContent;
 
   constructor() {}
 
