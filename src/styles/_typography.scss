@@ -115,6 +115,7 @@ code {
 }
 
 .gradient-text {
+  // !!! KEEP THIS ORDER !!!
   background: var(--gradient-100);
   background-clip: text;
   color: transparent;
