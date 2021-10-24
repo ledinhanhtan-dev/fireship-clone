@@ -1,5 +1,5 @@
-@import "/src/styles/variables";
-@import "/src/styles/partials/card";
+@import '/src/styles/variables';
+@import '/src/styles/partials/card';
 
 :host {
   @include card;
@@ -25,15 +25,16 @@ button {
   padding: 1rem 0;
   font-size: 0.75rem;
   margin: 1rem 0 1.5rem;
-  background-color: $green-200;
-  border-radius: $radius-2;
+  background-color: var(--green-200);
+  border-radius: var(--radius-2);
+  color: var(--neutral-0);
   font-weight: 700;
 
-  transition: transform 300ms ease;
+  transition: all 300ms ease;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: $shadow-card;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-tag);
   }
 
   @include respond($md) {

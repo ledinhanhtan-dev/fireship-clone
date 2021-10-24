@@ -1,15 +1,35 @@
 @import './variables';
 
+@font-face {
+  font-family: 'Cubano';
+  src: local('Cubano'),
+    url('/assets/fonts/cubano-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Attribute Mono';
+  src: local('Attribute Mono'),
+    url('/assets/fonts/attribute-mono.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Attribute Mono';
+  src: local('Attribute Mono'),
+    url('/assets/fonts/attribute-mono-bold.woff') format('woff');
+  font-weight: bold;
+}
+
 body {
   font-size: 1rem;
-  font-family: $font-primary;
+  font-family: var(--font-primary);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: $font-display;
+  font-family: var(--font-display);
   font-weight: normal;
 }
 
@@ -58,14 +78,14 @@ h4 {
 h5 {
   font-size: 1rem;
   font-weight: 400;
-  font-family: $font-code;
+  font-family: var(--font-code);
   text-transform: uppercase;
 }
 
 p {
   line-height: 1.5;
   font-size: 1.25rem;
-  color: $neutral-200;
+  color: var(--cl-text);
   @include respond($md) {
     font-size: 0.95rem;
   }
@@ -87,7 +107,7 @@ p {
 }
 
 code {
-  font-family: $font-code;
+  font-family: var(--font-code);
 }
 
 .footer {
@@ -95,30 +115,28 @@ code {
 }
 
 .gradient-text {
-  background: $gradient-100;
+  background: var(--gradient-100);
   background-clip: text;
   color: transparent;
 }
 
 .gradient-bg {
   padding: 0 5px;
-  color: $white;
-  background: $gradient-100;
-  border-radius: $radius-2;
+  color: var(--neutral-0);
+  background: var(--gradient-100);
+  border-radius: var(--radius-2);
 }
 
 .hi {
   padding: 0px 3px;
   font-weight: 400;
-  border-radius: $radius-1;
-  background-color: #4e5556;
-  color: #cbff8f;
+  border-radius: var(--radius-1);
 }
 
 .link {
-  color: $blue-200;
+  color: var(--blue-200);
 }
 
 .link-green {
-  color: $green-200;
+  color: var(--green-200);
 }

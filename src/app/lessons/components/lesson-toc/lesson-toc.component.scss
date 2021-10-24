@@ -4,9 +4,9 @@
   min-width: 250px;
   max-width: 275px;
   padding: 1.25rem 1rem;
-  border-radius: $radius-2;
-  background-color: $neutral-700;
-  box-shadow: $shadow-toc;
+  border-radius: var(--radius-2);
+  background-color: var(--bg-toc);
+  box-shadow: var(--shadow-toc);
   align-self: flex-start;
   display: block;
 
@@ -22,7 +22,7 @@
   }
 
   &-parent {
-    color: $blue-200;
+    color: var(--blue-200);
     font-weight: 500;
     font-size: 1.25rem;
   }
@@ -31,7 +31,7 @@
     padding: 0 1rem;
     margin-top: 0.75rem;
     font-size: 0.9375rem;
-    color: $neutral-200;
+    color: var(--cl-text);
 
     & > li {
       margin-bottom: 0.8rem;
@@ -54,7 +54,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $purple-200;
-    border-bottom: 1px solid $purple-200;
+    color: var(--purple-200);
+    border-bottom: 1px solid var(--purple-200);
   }
 }

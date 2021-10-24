@@ -1,9 +1,9 @@
 @mixin card {
   display: block;
-  border-radius: $radius-2;
-  background-color: $neutral-700;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-card);
+  background-color: var(--bg-card);
   transition: transform 300ms ease;
-  box-shadow: $shadow-card;
 
   &:hover {
     transform: translateY(-3px);

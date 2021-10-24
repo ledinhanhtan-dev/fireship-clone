@@ -7,8 +7,8 @@
 .box {
   margin: 0 auto;
   padding: 1rem 1.5rem 2.5rem;
-  background-color: $neutral-700;
-  box-shadow: $shadow-card;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-card);
   max-width: $xl;
 }
 
@@ -21,9 +21,9 @@
     padding: 0 5px;
     font-weight: 800;
     margin: 0 1rem 0 0;
-    background-color: rgba($neutral-800, 0.5);
-    font-family: $font-code;
-    color: $purple-200;
+    background-color: var(--bg-opacity);
+    font-family: var(--font-code);
+    color: var(--purple-200);
 
     @include respond($md) {
       font-size: 0.875rem;

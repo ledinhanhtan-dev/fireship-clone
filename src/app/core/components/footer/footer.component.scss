@@ -1,11 +1,11 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 :host {
   opacity: 0.8;
   font-size: 17px;
-  color: $neutral-200;
-  padding: $site-padding;
   padding-bottom: 3rem;
+  padding: $site-padding;
+  color: var(--cl-text);
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -52,11 +52,11 @@ hr {
 }
 
 .twitter {
-  color: $blue-200;
+  color: var(--blue-200);
 }
 
 .github {
-  color: $neutral-300;
+  color: var(--neutral-300);
 }
 
 .slack {

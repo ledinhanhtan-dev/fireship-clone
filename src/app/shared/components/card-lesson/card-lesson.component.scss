@@ -1,5 +1,5 @@
-@import "/src/styles/variables";
-@import "/src/styles/partials/card";
+@import '/src/styles/variables';
+@import '/src/styles/partials/card';
 
 :host {
   @include card;
@@ -20,6 +20,6 @@
   top: 0;
   right: 0;
   position: absolute;
-  color: $red-200;
+  color: var(--red-200);
   padding: 1rem;
 }

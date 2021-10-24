@@ -19,15 +19,14 @@ html {
 }
 
 body {
-  color: $white;
-  background-color: $neutral-800;
+  min-height: 100v;
 }
 
 ::selection {
-  color: $white;
-  background: $green-200;
+  color: white;
+  background: var(--green-200);
 }
 
 hr {
-  border-top: 2px dashed $neutral-700;
+  border-top: 2px dashed var(--neutral-700);
 }

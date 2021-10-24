@@ -6,7 +6,7 @@
 
 .info {
   padding: 1.5rem;
-  background-color: $neutral-700;
+  background-color: var(--bg-card);
   display: flex;
 
   &-desc {
@@ -35,7 +35,7 @@
     margin: 0;
     padding: 3px 7px;
     font-size: 0.875rem;
-    border-radius: $radius-1;
+    border-radius: var(--radius-1);
 
     @include respond($md) {
       font-size: 0.6rem;
@@ -45,13 +45,13 @@
 
   &-created {
     margin-bottom: 3px;
-    border: 1px solid $neutral-600;
+    border: 1px solid var(--bg-tag);
     width: max-content;
   }
 
   &-updated {
     font-weight: 600;
-    background-color: $neutral-600;
+    background-color: var(--bg-tag);
   }
 }
 

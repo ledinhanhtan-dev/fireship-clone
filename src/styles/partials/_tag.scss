@@ -1,35 +1,60 @@
 @import '/src/styles/variables';
 
+$tag-android: #a4c34a;
+$tag-angular: #dc0530;
+$tag-css: #f954be;
+$tag-docker: #2496ed;
+$tag-electron: #adecf3;
+$tag-fauna: #6675e0;
+$tag-firebase: #ffcb2b;
+$tag-flutter: #54c5f8;
+$tag-github: #24292e;
+$tag-go: #00add8;
+$tag-graphql: #e10097;
+$tag-javascript: #f0db4f;
+$tag-nest: #e0234e;
+$tag-node: #90c53f;
+$tag-python: #3879ab;
+$tag-react: #00d8ff;
+$tag-rpi: #bc1142;
+$tag-svelte: #ff3e00;
+$tag-typescript: #2775c3;
+$tag-vue: #41b883;
+
 // Colors - Background Colors
 
 .android {
+  color: white;
   background-color: $tag-android;
 }
 
 .angular {
+  color: white;
   background-color: $tag-angular;
 }
 
 .css {
-  color: $neutral-700;
+  color: var(--neutral-700);
   background-color: $tag-css;
 }
 
 .docker {
+  color: white;
   background-color: $tag-docker;
 }
 
 .electron {
-  color: $neutral-800;
+  color: var(--neutral-800);
   background-color: $tag-electron;
 }
 
 .fauna {
+  color: white;
   background-color: $tag-fauna;
 }
 
 .firebase {
-  color: $black;
+  color: black;
   background-color: $tag-firebase;
 }
 
@@ -39,6 +64,7 @@
 }
 
 .github {
+  color: white;
   background-color: $tag-github;
 }
 
@@ -56,40 +82,43 @@
 }
 
 .ionic {
-  color: $blue-200;
-  background-color: $white;
+  color: var(--blue-200);
+  background-color: white;
 }
 
 .ios {
-  color: $white;
-  background-color: $black;
+  color: white;
+  background-color: black;
 }
 
 .javascript {
-  color: $black;
+  color: black;
   background-color: $tag-javascript;
 }
 
 .machine-learning {
-  background-color: $purple-100;
+  color: white;
+  background-color: var(--purple-100);
 }
 
 .minimum-viable-product {
-  background: $gradient-200;
+  color: white;
+  background: var(--gradient-200);
 }
 
 .node {
-  color: $neutral-700;
+  color: var(--neutral-700);
   background-color: $tag-node;
 }
 
 .nest {
   color: $tag-nest;
-  background-color: $black;
+  background-color: black;
 }
 
 .pro {
-  background-color: $green-200;
+  color: white;
+  background-color: var(--green-200);
 }
 
 .python {
@@ -114,14 +143,21 @@
 
 .rxjs {
   color: #222;
-  background-color: $pink-200;
+  background-color: var(--pink-200);
+}
+
+.sass {
+  color: white;
+  background-color: #f954be;
 }
 
 .svelte {
+  color: white;
   background-color: $tag-svelte;
 }
 
 .typescript {
+  color: white;
   background-color: $tag-typescript;
 }
 

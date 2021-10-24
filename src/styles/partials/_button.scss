@@ -2,9 +2,9 @@
 
 @mixin button {
   font-weight: 700;
-  color: $neutral-200;
   letter-spacing: 0.05ch;
-  border-radius: $radius-2;
+  color: var(--cl-text);
+  border-radius: var(--radius-2);
   transition: all 300ms ease;
   border: 2px solid transparent;
   transition-property: transform, background-color;
@@ -50,7 +50,7 @@
   }
 
   &:hover {
-    color: $white;
+    color: white;
     transform: translateY(-2px);
   }
 }
@@ -64,42 +64,42 @@
   }
 
   &.flat {
-    color: $white;
+    color: white;
     border-color: $color;
     background-color: $color;
   }
 }
 
 .neutral {
-  @include outline-flat($neutral-700);
-  color: $neutral-200 !important;
+  @include outline-flat(var(--neutral-700));
+  color: var(--neutral-200) !important;
 }
 
 .blue {
-  @include outline-flat($blue-200);
+  @include outline-flat(var(--blue-200));
 }
 
 .green {
-  @include outline-flat($green-200);
+  @include outline-flat(var(--green-200));
 }
 
 .orange {
-  @include outline-flat($orange-200);
+  @include outline-flat(var(--orange-200));
 }
 
 .pink {
-  @include outline-flat($pink-200);
+  @include outline-flat(var(--pink-200));
 }
 
 .purple {
-  @include outline-flat($purple-200);
+  @include outline-flat(var(--purple-200));
 }
 
 .red {
-  @include outline-flat($red-200);
+  @include outline-flat(var(--red-200));
 }
 
 .gray {
-  @include outline-flat($neutral-200);
-  color: $neutral-700 !important;
+  @include outline-flat(var(--neutral-200));
+  color: var(--neutral-700) !important;
 }

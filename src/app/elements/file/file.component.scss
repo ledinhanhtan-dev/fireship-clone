@@ -3,19 +3,19 @@
 :host {
   margin-top: 1rem;
   align-items: center;
-  box-shadow: $shadow-card;
-  background-color: $neutral-700;
+  box-shadow: var(--shadow-card);
+  background-color: var(--bg-card);
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   display: inline-flex;
 }
 
 app-icon {
+  color: var(--cl-text);
   margin-right: 0.5rem;
-  color: $neutral-200;
 }
 
 .name {
-  color: $neutral-200;
+  color: var(--cl-text);
   font-size: 1.125rem;
 
   @include respond($md) {
