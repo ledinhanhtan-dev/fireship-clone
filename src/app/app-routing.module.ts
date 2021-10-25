@@ -30,21 +30,18 @@ const routes: Routes = [
       ),
   },
   { path: 'page-not-found', component: PageNotFoundComponent },
-  // { path: '**', redirectTo: 'page-not-found' },
+  { path: '**', redirectTo: 'page-not-found' },
 ];
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'top',
+  initialNavigation: 'enabled',
   anchorScrolling: 'enabled',
   onSameUrlNavigation: 'reload',
 };
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
-      initialNavigation: 'enabled',
-    }),
-  ],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
