@@ -1,9 +1,12 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
   Injector,
   Injectable,
   ApplicationRef,
   ComponentFactory,
   ComponentFactoryResolver,
+  PLATFORM_ID,
+  Inject,
 } from '@angular/core';
 import { NgElement, WithProperties } from '@angular/elements';
 import { CodeComponent } from '../code/code.component';
@@ -22,6 +25,7 @@ export class ElementsService {
     private injector: Injector,
     private applicationRef: ApplicationRef,
     private componentFactoryResolver: ComponentFactoryResolver,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {
     this.imgFactory =
       this.componentFactoryResolver.resolveComponentFactory(ImgComponent);
@@ -32,6 +36,8 @@ export class ElementsService {
   }
 
   replaceByFileElements(paragraphs: HTMLParagraphElement[]) {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     // Replace for each.
     paragraphs.forEach(p => {
       // Get data from parsed markdown.
@@ -62,6 +68,8 @@ export class ElementsService {
   }
 
   replaceByCodeElements(pres: NodeListOf<HTMLPreElement>) {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     // Similar to steps above
     pres.forEach(pre => {
       const code = pre.textContent!;
@@ -82,6 +90,8 @@ export class ElementsService {
   }
 
   replaceByImgElements(paragraphs: HTMLParagraphElement[]) {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     // Similar to steps above
     paragraphs.forEach(p => {
       const segments = p.textContent!.split('"');
@@ -92,7 +102,7 @@ export class ElementsService {
 
       imgEl.src = src;
 
-      const codeRef = this.codeFactory.create(this.injector, [], imgEl);
+      const codeRef = this.imgFactory.create(this.injector, [], imgEl);
       this.applicationRef.attachView(codeRef.hostView);
 
       p.insertAdjacentElement('afterend', imgEl);

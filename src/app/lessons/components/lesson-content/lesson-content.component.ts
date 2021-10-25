@@ -1,4 +1,4 @@
-import { OnInit, Component, Input } from '@angular/core';
+import { OnInit, Component, Input, PLATFORM_ID, Inject } from '@angular/core';
 import { stringHelper } from 'app/helpers/string-helper';
 import {
   TocItem,
@@ -8,6 +8,7 @@ import {
 import { LessonsService } from 'app/lessons/services/lessons.service';
 import { ElementsService } from 'app/elements/services/elements.service';
 import { MarkdownComponent } from 'ngx-markdown';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-lesson-content',
@@ -21,6 +22,7 @@ export class LessonContentComponent implements OnInit {
   constructor(
     private lsService: LessonsService,
     private elService: ElementsService,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {}
@@ -58,6 +60,8 @@ export class LessonContentComponent implements OnInit {
   }
 
   private setIdAndGenerateToc(markdownEl: HTMLElement) {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const headings = markdownEl.querySelectorAll('h2, h3');
 
     let toc: TableOfContent = [];

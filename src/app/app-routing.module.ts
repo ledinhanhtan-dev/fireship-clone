@@ -35,6 +35,7 @@ const routes: Routes = [
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'top',
+  initialNavigation: 'enabled',
   anchorScrolling: 'enabled',
   onSameUrlNavigation: 'reload',
 };

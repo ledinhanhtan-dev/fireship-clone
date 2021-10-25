@@ -1,5 +1,12 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { createCustomElement } from '@angular/elements';
+import {
+  Component,
+  Inject,
+  Injector,
+  OnInit,
+  PLATFORM_ID,
+} from '@angular/core';
 import { CodeComponent } from './elements/code/code.component';
 import { FileComponent } from './elements/file/file.component';
 import { ImgComponent } from './elements/img/img.component';
@@ -12,20 +19,25 @@ import { ImgComponent } from './elements/img/img.component';
 export class AppComponent implements OnInit {
   title = 'Fireship';
 
-  constructor(private injector: Injector) {
-    const elements: any[] = [
-      [CodeComponent, 'code-element'],
-      [FileComponent, 'file-element'],
-      [ImgComponent, 'img-element'],
-    ];
+  constructor(
+    private injector: Injector,
+    @Inject(PLATFORM_ID) platformId: Object,
+  ) {
+    if (isPlatformBrowser(platformId)) {
+      const elements: any[] = [
+        [CodeComponent, 'code-element'],
+        [FileComponent, 'file-element'],
+        [ImgComponent, 'img-element'],
+      ];
 
-    //
-    for (const [component, name] of elements) {
-      // Convert each component to a custom element.
-      const el = createCustomElement(component, { injector: this.injector });
+      //
+      for (const [component, name] of elements) {
+        // Convert each component to a custom element.
+        const el = createCustomElement(component, { injector: this.injector });
 
-      // Register the custom element with the browser.
-      customElements.define(name, el);
+        // Register the custom element with the browser.
+        customElements.define(name, el);
+      }
     }
   }
 

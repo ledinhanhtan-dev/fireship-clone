@@ -19,7 +19,7 @@ import * as e from './elements';
   imports: [
     CoreModule,
     SharedModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     HighlightModule,
