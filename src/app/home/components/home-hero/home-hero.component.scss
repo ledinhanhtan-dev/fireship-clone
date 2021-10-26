@@ -25,7 +25,7 @@
   display: flex;
   margin-top: 1rem;
 
-  & > app-button:first-child {
+  & > app-button:not(:last-child) {
     margin-right: 0.5rem;
   }
 }
@@ -34,10 +34,11 @@
   :host {
     display: flex;
     flex-direction: column;
+    padding: 3rem 7vw;
   }
 
   .content {
-    padding: 0 2rem;
+    padding: 0 0.5rem;
   }
 
   .text {
@@ -46,5 +47,13 @@
 
   .actions {
     justify-content: center;
+  }
+}
+
+.tags {
+  display: none;
+
+  @include respond($md) {
+    display: inline-flex;
   }
 }

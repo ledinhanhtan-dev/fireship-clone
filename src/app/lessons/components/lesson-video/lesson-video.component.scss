@@ -58,9 +58,12 @@
 .lesson {
   &-links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
     & > app-link {
       margin-left: 6px;
+      margin-bottom: 6px;
     }
 
     app-icon {
@@ -70,6 +73,7 @@
 
   &-tags {
     display: flex;
-    justify-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }

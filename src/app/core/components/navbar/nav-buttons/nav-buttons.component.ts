@@ -11,7 +11,8 @@ export class NavButtonsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSwitchTheme() {
+  onSwitchTheme(themeBtn: HTMLButtonElement) {
     this.themeService.switchTheme();
+    themeBtn.blur();
   }
 }

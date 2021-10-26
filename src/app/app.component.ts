@@ -10,6 +10,7 @@ import {
 import { CodeComponent } from './elements/code/code.component';
 import { FileComponent } from './elements/file/file.component';
 import { ImgComponent } from './elements/img/img.component';
+import { ThemeService } from '@core/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,8 @@ export class AppComponent implements OnInit {
   constructor(
     private injector: Injector,
     @Inject(PLATFORM_ID) platformId: Object,
+
+    private themeService: ThemeService,
   ) {
     if (isPlatformBrowser(platformId)) {
       const elements: any[] = [
@@ -38,6 +41,8 @@ export class AppComponent implements OnInit {
         // Register the custom element with the browser.
         customElements.define(name, el);
       }
+
+      this.themeService.loadTheme();
     }
   }
 
