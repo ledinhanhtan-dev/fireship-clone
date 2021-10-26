@@ -49,11 +49,3 @@
     justify-content: center;
   }
 }
-
-.tags {
-  display: none;
-
-  @include respond($md) {
-    display: inline-flex;
-  }
-}
