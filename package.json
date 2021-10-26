@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build && ng run client:server",
+    "start": "yarn run serve:ssr",
+    "build": "yarn run build:ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run client:serve-ssr",
