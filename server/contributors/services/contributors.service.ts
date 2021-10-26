@@ -11,11 +11,10 @@ export class ContributorsService {
   ) {}
 
   async getAllContributors(): Promise<Contributor[]> {
-    return [];
-    // return this.contrRepository
-    //   .createQueryBuilder('contributor')
-    //   .select(['contributor.name', 'contributor.slug'])
-    //   .getMany();
+    return this.contrRepository
+      .createQueryBuilder('contributor')
+      .select(['contributor.name', 'contributor.slug'])
+      .getMany();
   }
 
   async getContributor(slug: string): Promise<Contributor> {
