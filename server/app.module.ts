@@ -19,11 +19,11 @@ import { ContributorsModule } from './contributors/contributors.module';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => {
-        // const isProduction = configService.get('STAGE') === 'prod';
+        const isProduction = configService.get('STAGE') === 'prod';
 
         return {
-          // ssl: isProduction,
-          // extra: { ssl: isProduction ? { rejectUnauthorized: false } : null },
+          ssl: isProduction,
+          extra: { ssl: isProduction ? { rejectUnauthorized: false } : null },
           type: 'postgres',
           host: configService.get('DB_HOST'),
           port: +configService.get('DB_PORT'),
