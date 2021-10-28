@@ -106,6 +106,8 @@ Database:
 - In the original Fireship, content is server by using [Hugo Framework](https://gohugo.io/), which made the site incredibly fast. But implementing Hugo is out of scope of this clone project using [Angular](https://angular.io) as the main framework. Therefore the Angular code each Lesson is just an temporary solution.
 - And finally, there is many missing features such as: single-course, login, search,... (but I decided not to implement those because of the conflict described above)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Usage
 
 Here are some secreenshots of the app
