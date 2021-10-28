@@ -66,7 +66,7 @@ Disclaimer: this is just a project for practicing, without any other purposes.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Frameworks/libraries used
+### Frameworks/libraries
 
 Front-end:
 
