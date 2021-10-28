@@ -1,11 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -68,12 +61,6 @@ Here is my first app using Angular as front-end to build. It's a simple clone ve
 This is a challenging project, especially the functionality of an e-commerce website such as sorting categories, add/remove item from cart and connect to the database using REST API.
 
 Still, this project has a lot uncovered features and also required a structured database to continue to expand!
-
-Stack included:
-
-- Angular as front-end
-- NodeJS (NestJS framework) as back-end
-- PostgreSQL as database
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
