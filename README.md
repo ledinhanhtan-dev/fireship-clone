@@ -103,6 +103,8 @@ Database:
 - Code blocks is displayed by using [HighlightJS](https://github.com/highlightjs/highlight.js/)
 - User can switch theme by toggling "Theme" button
 - Fully response for all devices
+- There is many missing features such as: single-course, login, search,...
+- In the original Fireship, content is server by using [Hugo Framework](https://gohugo.io/), which made the site incredibly fast. But implementing Hugo is out of scope of this clone project using [Angular](https://angular.io) as the main framework. Therefore the Angular code each Lesson is just an temporary solution.
 
 ## Usage
 
