@@ -102,6 +102,7 @@ Database:
 - Content in each lesson is parsed from markdown file (.md) by using [MarkedJS](https://marked.js.org/)
 - Code blocks is displayed by using [HighlightJS](https://github.com/highlightjs/highlight.js/)
 - User can switch theme by toggling "Theme" button
+- Fully response for all devices
 
 ## Usage
 
