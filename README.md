@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://tnc-clone.web.app/">
-    <img src="https://avatars.githubusercontent.com/u/46283609?s=280&v=4" alt="Logo" width="194" height="71">
+    <img src="https://avatars.githubusercontent.com/u/46283609" alt="Logo" width=""200" height="200">
   </a>
 
   <h3 align="center">A full-stack web app (clone) inspired by Fireship.io</h3>
