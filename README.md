@@ -107,7 +107,7 @@ Database:
 - Code blocks are displayed by using [HighlightJS](https://github.com/highlightjs/highlight.js/)
 - Available api endpoints: [/api/lessons](https://fireship-clone.herokuapp.com/api/lessons), [/api/tags](https://fireship-clone.herokuapp.com/api/tags), [/api/contributors](https://fireship-clone.herokuapp.com/api/contributors) ...
 - In the original Fireship, content is served by using [Hugo Framework](https://gohugo.io/), which made the site incredibly fast. But implementing Hugo is out of scope of this clone project (using [Angular](https://angular.io) as the main framework). Therefore the Angular code each Lesson is just an temporary solution.
-- And finally, there is many missing features such as: single-course, login, search,... (but I decided not to implement those because of the conflict described above)
+- And finally, there is many missing features such as: single-course, login, search,... to implement 💪
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
