@@ -77,9 +77,7 @@ Stack included:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Built With
-
-Frameworks/libraries used to bootstrap the project
+### Frameworks/libraries used to bootstrap the project
 
 Front-end:
 
@@ -93,6 +91,10 @@ Back-end:
 - [NestJS](https://nestjs.com)
 - [@nestjs/typeorm](https://www.npmjs.com/package/@nestjs/typeorm)
 - [@nestjs/ng-universal](https://www.npmjs.com/package/@nestjs/ng-universal)
+
+Database:
+
+- [PostgreSQL](https://www.postgresql.org)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
