@@ -103,7 +103,7 @@ Database:
 - User can switch theme by toggling "Theme" button
 - Code blocks is displayed by using [HighlightJS](https://github.com/highlightjs/highlight.js/)
 - Content in each lesson is parsed from markdown file (.md) by using [MarkedJS](https://marked.js.org/)
-- In the original Fireship, content is server by using [Hugo Framework](https://gohugo.io/), which made the site incredibly fast. But implementing Hugo is out of scope of this clone project using [Angular](https://angular.io) as the main framework. Therefore the Angular code each Lesson is just an temporary solution.
+- In the original Fireship, content is served by using [Hugo Framework](https://gohugo.io/), which made the site incredibly fast. But implementing Hugo is out of scope of this clone project (using [Angular](https://angular.io) as the main framework). Therefore the Angular code each Lesson is just an temporary solution.
 - And finally, there is many missing features such as: single-course, login, search,... (but I decided not to implement those because of the conflict described above)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
