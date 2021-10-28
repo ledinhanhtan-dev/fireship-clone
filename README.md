@@ -3,8 +3,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://tnc-clone.web.app/">
-    <img src="https://avatars.githubusercontent.com/u/46283609" alt="Logo" width=""200" height="200">
+  <a href="https://fireship-clone.herokuapp.com/">
+    <img src="https://avatars.githubusercontent.com/u/46283609" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">A full-stack web app (clone) inspired by Fireship.io</h3>
@@ -99,7 +99,8 @@ Database:
 
 ## Features
 
-Parse markdown (.md) file to content
+- Content in each lesson is parsed from markdown file (.md) by using [MarkedJS](https://marked.js.org/)
+- User can switch theme by toggling "Theme" button
 
 ## Usage
 
@@ -123,7 +124,7 @@ Distributed under the MIT License.
 
 📧 Le Dinh Anh Tan - ledinhanhtan.dev@gmail.com
 
-📌 Project Link: [https://github.com/ledinhanhtan-dev/tnc-client](https://github.com/ledinhanhtan-dev/tnc-client)
+📌 Project Link: [https://github.com/ledinhanhtan-dev/fireship-clone](https://github.com/ledinhanhtan-dev/fireship-clone)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
