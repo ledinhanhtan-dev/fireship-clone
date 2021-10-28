@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://tnc-clone.web.app/">
-    <img src="https://user-images.githubusercontent.com/88238288/137060262-78ed6756-c53b-434d-9206-20bb41a6cb6e.png" alt="Logo" width="194" height="71">
+    <img src="https://avatars.githubusercontent.com/u/46283609?s=280&v=4" alt="Logo" width="194" height="71">
   </a>
 
   <h3 align="center">A full-stack web app (clone) inspired by Fireship.io</h3>
@@ -96,6 +96,10 @@ Database:
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
+
+## Features
+
+Parse markdown (.md) file to content
 
 ## Usage
 
