@@ -82,13 +82,15 @@ Stack included:
 Frameworks/libraries used to bootstrap the project
 
 Front-end:
-- [Angular](https://angular.io/)
+
+- [Angular](https://angular.io)
 - [@angular/elements](https://angular.io/api/elements)
-- [HighlightJS](https://highlightjs.org/)
+- [HighlightJS](https://highlightjs.org)
 - [Ngx-Markdown](https://www.npmjs.com/package/ngx-markdown)
 
 Back-end:
-- [NestJS](https://nestjs.com/)
+
+- [NestJS](https://nestjs.com)
 - [@nestjs/typeorm](https://www.npmjs.com/package/@nestjs/typeorm)
 - [@nestjs/ng-universal](https://www.npmjs.com/package/@nestjs/ng-universal)
 
@@ -98,7 +100,7 @@ Back-end:
 
 ## Getting Started
 
-🚀 The app is live at [https://fireship-clone.herokuapp.com/](https://fireship-clone.herokuapp.com/)
+🚀 The app is live at [https://fireship-clone.herokuapp.com](https://fireship-clone.herokuapp.com)
 
 (Note: open up the app for the first time could take some time due to free hosting plan on Heroku)
 
@@ -139,9 +141,10 @@ Distributed under the MIT License.
 Languages and frameworks/libraries used in this project
 
 - [TypeScript](https://www.typescriptlang.org)
-- [Angular](https://angular.io)
 - [Sass](https://sass-lang.com)
-- [SwiperJS](https://swiperjs.com)
+- [Angular](https://angular.io)
+- [HighlightJS](https://highlightjs.org)
+- [Ngx-Markdown](https://www.npmjs.com/package/ngx-markdown)
 - [NestJS](https://nestjs.com)
 - [TypeOrm](https://typeorm.io)
 
