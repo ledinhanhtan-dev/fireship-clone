@@ -62,7 +62,7 @@ Here is my first app using Angular as front-end to build. It's a simple clone ve
 
 This is a challenging project, especially the functionality of an e-commerce website such as sorting categories, add/remove item from cart and connect to the database using REST API.
 
-Disclaimer: this is just a project for practicing, without any other purposes.
+Disclaimer: this is a project for practicing, without any other purpose.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
