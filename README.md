@@ -58,10 +58,6 @@
 
 [Fireship.io](https://fireship.io/) is a great place for web developers. I find the site very interesting
 
-Here is my first app using Angular as front-end to build. It's a simple clone version of the [TNC Store](https://www.tncstore.vn/) e-commerce site.
-
-This is a challenging project, especially the functionality of an e-commerce website such as sorting categories, add/remove item from cart and connect to the database using REST API.
-
 Disclaimer: this is a project for practicing, without any other purpose.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
