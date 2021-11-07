@@ -152,4 +152,4 @@ Languages and frameworks/libraries used in this project
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[product-screenshot]: https://user-images.githubusercontent.com/88238288/136992447-59b2f92e-378f-4724-a314-9d1e77855493.png
+[product-screenshot]: https://user-images.githubusercontent.com/88238288/140630921-e3c2cce8-7347-4968-844c-39c08429365d.png
