@@ -52,7 +52,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://tnc-clone.web.app/)
+[![Product Name Screen Shot][product-screenshot]](https://fireship-clone.herokuapp.com)
 
 🚀🚀🚀 Practice makes perfect!
 
@@ -111,7 +111,8 @@ Database:
 
 The purpose of this project is to practice and master Angular 👏
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here are some screenshots of the working app:
+[![Screenshots][screenshots]](https://fireship-clone.herokuapp.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -153,3 +154,4 @@ Languages and frameworks/libraries used in this project
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [product-screenshot]: https://user-images.githubusercontent.com/88238288/140630921-e3c2cce8-7347-4968-844c-39c08429365d.png
+[screenshots]: https://user-images.githubusercontent.com/88238288/140631333-19e4ecc1-9860-4f81-80e3-a3a4f25d73c5.png
