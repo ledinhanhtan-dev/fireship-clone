@@ -67,9 +67,9 @@ Disclaimer: this is a project for practicing, without any other purpose.
 Front-end:
 
 - [Angular](https://angular.io)
-- [@angular/elements](https://angular.io/api/elements)
 - [HighlightJS](https://highlightjs.org)
 - [Ngx-Markdown](https://www.npmjs.com/package/ngx-markdown)
+- [@angular/elements](https://angular.io/api/elements)
 
 Back-end:
 
