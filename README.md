@@ -14,7 +14,7 @@
     <a href="https://fireship-clone.herokuapp.com/"><strong>View Demo</strong></a>
     <br />
     <br />
-    <a href="https://fireship.io/">View Source Website</a>
+    <a href="https://fireship.io/">View Source</a>
     ·
     <a href="https://github.com/ledinhanhtan-dev/fireship-clone/issues">Report Bug</a>
     ·
