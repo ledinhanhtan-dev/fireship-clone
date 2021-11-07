@@ -56,7 +56,7 @@
 
 🚀🚀🚀 Practice makes perfect!
 
-[Fireship.io](https://fireship.io/) is a great place for web developers. I find the site very interesting
+[Fireship.io](https://fireship.io/) is an awesome website for web developers at all level. By cloning the website, I had an chance to reinforce skills used in Angular and advanced CSS/Sass techniques such as: grid layout, theme, sass functions. Also exploring and implementing other third-party libraries to work efficiently with the app.
 
 Disclaimer: this is a project for practicing, without any other purpose.
 
