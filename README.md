@@ -112,6 +112,7 @@ Database:
 The purpose of this project is to practice and master Angular 👏
 
 Here are some screenshots of the working app:
+
 [![Screenshots][screenshots]](https://fireship-clone.herokuapp.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
